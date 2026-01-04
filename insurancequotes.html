@@ -104,20 +104,38 @@
                                 <label for="provider" class="form-label">
                                     Insurance Provider <span class="text-danger">*</span>
                                 </label>
-                                <select id="provider" name="provider[]" class="form-select" multiple required>
-                                    <option value="PacificCross">Pacific Cross</option>
-                                    <option value="OONA">OONA</option>
-                                    <option value="PhilCare">PhilCare</option>
-                                    <option value="Medicare">Medicare</option>
-                                    <option value="Alpha">Alpha Insurance</option>
-                                    <option value="Kaiser">Kaiser</option>
-                                    <option value="Other">Other / Not Sure</option>
-                                </select>
+                                <div id="provider" class="d-flex flex-column gap-2" role="group" aria-label="Insurance Providers">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_pacific" name="provider[]" value="PacificCross" required />
+                                        <label class="form-check-label" for="provider_pacific">Pacific Cross</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_oona" name="provider[]" value="OONA" />
+                                        <label class="form-check-label" for="provider_oona">OONAx</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_philcare" name="provider[]" value="PhilCare" />
+                                        <label class="form-check-label" for="provider_philcare">PhilCare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_medicare" name="provider[]" value="Medicare" />
+                                        <label class="form-check-label" for="provider_medicare">Medicare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_alpha" name="provider[]" value="Alpha" />
+                                        <label class="form-check-label" for="provider_alpha">Alpha Insurance</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_kaiser" name="provider[]" value="Kaiser" />
+                                        <label class="form-check-label" for="provider_kaiser">Kaiser</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_other" name="provider[]" value="Other" />
+                                        <label class="form-check-label" for="provider_other">Other / Not Sure</label>
+                                    </div>
+                                </div>
                                 <div class="invalid-feedback">
                                     Please select an insurance provider.
-                                </div>
-                                <div class="form-text">
-                                    Hold Ctrl (Windows) or Command (Mac) to select multiple providers.
                                 </div>
                             </div>
 
@@ -141,7 +159,7 @@
                                     <label for="age" class="form-label">
                                         Age
                                     </label>
-                                    <input type="number" id="age" name="age" class="form-control" min="0" />
+                                    <input type="number" id="age" name="age" class="form-control" min="0" readonly />
                                 </div>
                             </div>
 
@@ -200,7 +218,7 @@
 
                             <div class="mb-3">
                                 <label for="message" class="form-label">
-                                    Remarks
+                                    Remarks:
                                 </label>
                                 <textarea id="message" name="message"
                                           class="form-control"
