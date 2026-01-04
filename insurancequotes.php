@@ -95,7 +95,7 @@ if ($fullName === '' || $email === '' || $providerValues === []) {
 // Map internal text for provider if needed
 $providerMap = [
     'PacificCross' => 'Pacific Cross',
-    'OONA' => 'OONAx',
+    'OONA' => 'OONA',
     'PhilCare' => 'PhilCare',
     'Medicare' => 'Medicare',
     'Alpha' => 'Alpha Insurance',
