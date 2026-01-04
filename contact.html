@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contact Us - Health Connect</title>
+    <meta name="description" content="Contact Health Connect for insurance assistance, home health care coordination, or diagnostic scheduling." />
+    <meta name="keywords" content="health connect contact, insurance assistance contact, home health care contact, diagnostics contact" />
+    <meta name="author" content="Health Connect Philippines" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+                <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+                Health Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navHC" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container py-4">
+
+        <h2 class="text-primary mb-3">Contact Us</h2>
+        <p class="text-muted mb-4">
+            Need help with insurance, home care, or diagnostics?<br />
+            Send us a message and our team will get back to you as soon as possible.
+        </p>
+
+        <div class="row g-4">
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <form method="post" action="sendmail.php" novalidate>
+                            <div class="mb-3">
+                                <label for="txtName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input name="txtName" id="txtName" type="text" class="form-control" placeholder="Juan Dela Cruz" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input name="txtEmail" id="txtEmail" type="email" class="form-control" placeholder="you@example.com" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtPhone" class="form-label">Mobile Number</label>
+                                <input name="txtPhone" id="txtPhone" type="text" class="form-control" placeholder="09XX XXX XXXX" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtMessage" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea name="txtMessage" id="txtMessage" rows="5" class="form-control" placeholder="How can we help you?" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-hc-action">
+                                Send Message
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT INFO -->
+            <div class="col-lg-5">
+                <div class="card border-0 bg-light h-100">
+                    <div class="card-body">
+
+                        <h5 class="text-primary mb-3">Health Connect Office</h5>
+
+                        <p class="mb-1 fw-semibold">Address</p>
+                        <p class="small text-muted mb-2">
+                            LVH Commercial Building<br />
+                            Sitio Alang Ilan<br />
+                            Pasong Camachile II<br />
+                            City of General Trias, Cavite
+                        </p>
+
+                        <p class="mb-1 fw-semibold mt-3">Mobile Numbers</p>
+                        <p class="small text-muted mb-2">
+                            📞 0926 997 2271<br />
+                            📞 0961 971 4859
+                        </p>
+
+                        <p class="mb-1 fw-semibold mt-3">Email</p>
+                        <p class="small text-muted mb-2">
+                            support@healthconnect.ph
+                        </p>
+
+                        <hr />
+
+                        <h6 class="text-primary mb-2">Map Location</h6>
+                        <div class="ratio ratio-16x9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.44547024827!2d120.888!3d14.3247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ae5f59f2b7f7%3A0xfb0be7d2bae4a898!2sGeneral%20Trias%2C%20Cavite!5e0!3m2!1sen!2sph!4v0000000000000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <span>&copy; 2025 Health Connect</span>
+            <span>Insurance • Home Health Care • Diagnostics</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Schedule an Appointment</title>
+    <meta name="description" content="Schedule insurance assistance, home health care, or diagnostics appointments with Health Connect." />
+    <meta name="keywords" content="health connect, schedule appointment, home health care, diagnostics, insurance assistance" />
+    <meta name="author" content="Health Connect Philippines" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+                <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+                Health Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navHC" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container py-4">
+        <h2 class="text-primary mb-3">Schedule an Appointment</h2>
+        <p class="text-muted mb-4">
+            Use this form to request an appointment for insurance assistance, home health care,
+            or diagnostics. Health Connect will route your request to the appropriate team or
+            partner provider and contact you with the next steps.
+        </p>
+
+        <div class="row g-4">
+            <!-- FORM COLUMN -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form id="schedulingForm" class="needs-validation" novalidate method="post" action="scheduling.php">
+                            <!-- Your Information -->
+                            <h5 class="mt-2 mb-3">Your Information</h5>
+
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="full_name" name="full_name"
+                                       class="form-control"
+                                       placeholder="Juan Dela Cruz" required />
+                                <div class="invalid-feedback">Full Name is required.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" id="email" name="email"
+                                       class="form-control"
+                                       placeholder="you@example.com" required />
+                                <div class="invalid-feedback">Email Address is required.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Mobile Number
+                                </label>
+                                <input type="text" id="phone" name="phone"
+                                       class="form-control"
+                                       placeholder="+63 9XX XXX XXXX" />
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <!-- Appointment Details -->
+                            <h5 class="mb-3">Appointment Details</h5>
+
+                            <div class="mb-3">
+                                <label for="service" class="form-label">
+                                    Service <span class="text-danger">*</span>
+                                </label>
+                                <select id="service" name="service" class="form-select" required>
+                                    <option value="">-- Select Service --</option>
+                                    <option value="Insurance – Consultation / Plan Discussion">Insurance – Consultation / Plan Discussion</option>
+                                    <option value="Insurance – Enrollment / Application Assistance">Insurance – Enrollment / Application Assistance</option>
+                                    <option value="Insurance – Claims Assistance">Insurance – Claims Assistance</option>
+                                    <option value="Diagnostics - Laboratory Test">Diagnostics - Laboratory Test</option>
+                                    <option value="Diagnostics - Radiology Procedure">Diagnostics - Radiology Procedure</option>
+                                    <option value="Home Health Care - Private Duty Nurse">Home Health Care - Private Duty Nurse</option>
+                                    <option value="Home Health Care - Caregiver">Home Health Care - Caregiver</option>
+                                    <option value="Other / Not Sure">Other / Not Sure</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service.</div>
+                            </div>
+
+                            <!-- Preferred Provider / Company -->
+                            <div class="mb-3" id="providerPanel">
+                                <label for="provider" class="form-label">
+                                    Preferred Provider / Company
+                                </label>
+                                <select id="provider" name="provider" class="form-select">
+                                    <option value="">-- Any / Not Sure --</option>
+                                    <option value="Pacific Cross">Pacific Cross</option>
+                                    <option value="OONA">OONA</option>
+                                    <option value="PhilCare">PhilCare</option>
+                                    <option value="Medicare">Medicare</option>
+                                    <option value="Alpha Insurance">Alpha Insurance</option>
+                                    <option value="Kaiser">Kaiser</option>
+                                    <option value="Other">Other / Not Listed</option>
+                                </select>
+                            </div>
+
+                            <!-- Service Type / Category -->
+                            <div class="mb-3" id="categoryPanel">
+                                <label for="category" class="form-label">
+                                    Service Type / Category
+                                </label>
+                                <input type="text" id="category" name="category"
+                                       class="form-control"
+                                       placeholder="e.g., ER coverage, HMO, CT scan, home visit, etc." />
+                            </div>
+
+                            <!-- Preferred Date & Time -->
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="preferred_date" class="form-label">
+                                        Preferred Date
+                                    </label>
+                                    <input type="date" id="preferred_date" name="preferred_date"
+                                           class="form-control" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="preferred_time" class="form-label">
+                                        Preferred Time
+                                    </label>
+                                    <input type="time" id="preferred_time" name="preferred_time"
+                                           class="form-control" />
+                                </div>
+                            </div>
+
+                            <!-- Additional Notes -->
+                            <div class="mb-3">
+                                <label for="notes" class="form-label">
+                                    Additional Notes / Details (optional)
+                                </label>
+                                <textarea id="notes" name="notes"
+                                          class="form-control"
+                                          rows="4"
+                                          placeholder="You may include diagnosis (if any), doctor’s request, preferred hospital or clinic, or other details."></textarea>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="submit" class="btn btn-primary btn-hc-action">
+                                    Submit Scheduling Request
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary">
+                                    Clear Form
+                                </button>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                By submitting this form, you agree that Health Connect may share your information with
+                                partner providers for the purpose of arranging your appointment and contacting you
+                                regarding your request.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDE INFO COLUMN -->
+            <div class="col-lg-4">
+                <div class="card border-0 bg-light h-100">
+                    <div class="card-body">
+                        <h5 class="mb-3">What happens after you submit?</h5>
+                        <ul class="small text-muted mb-3">
+                            <li>Your request is sent securely to Health Connect.</li>
+                            <li>We route it to the appropriate partner clinic, diagnostic center, or insurer.</li>
+                            <li>You may receive a call, SMS, or email to confirm details and available schedule.</li>
+                        </ul>
+
+                        <h6 class="mb-2">Tips for smoother processing</h6>
+                        <ul class="small text-muted">
+                            <li>Use an active email and mobile number.</li>
+                            <li>If you have a doctor’s request form, mention it in the notes.</li>
+                            <li>Include your preferred location or city (e.g., Muntinlupa, Makati, Quezon City).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <span>&copy; 2025 Health Connect</span>
+            <span>Insurance • Home Health Care • Diagnostics</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById('schedulingForm');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }
+
+            var serviceSelect = document.getElementById('service');
+            var providerPanel = document.getElementById('providerPanel');
+            var categoryPanel = document.getElementById('categoryPanel');
+
+            function updateVisibility() {
+                if (!serviceSelect) return;
+                var val = (serviceSelect.value || '').toLowerCase();
+
+                var hide =
+                    val === 'home health care - private duty nurse'.toLowerCase() ||
+                    val === 'home health care - caregiver'.toLowerCase() ||
+                    val === 'diagnostics - laboratory test'.toLowerCase() ||
+                    val === 'diagnostics - radiology procedure'.toLowerCase();
+
+                if (providerPanel) providerPanel.style.display = hide ? 'none' : 'block';
+                if (categoryPanel) categoryPanel.style.display = hide ? 'none' : 'block';
+            }
+
+            if (serviceSelect) {
+                serviceSelect.addEventListener('change', updateVisibility);
+                updateVisibility();
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Global SEO Defaults ===== -->
+  <title>MediCard Kabayan – OFW with Beneficiaries in the Philippines</title>
+  <meta name="description" content="Health Connect is a one-stop healthcare portal offering insurance assistance, home health care, and diagnostic laboratory services in the Philippines." />
+  <meta name="keywords" content="health connect, insurance assistance, home health care, diagnostic laboratory, radiology, laboratory, philippines" />
+  <meta name="author" content="Health Connect Philippines" />
+
+  <!-- ===== Bootstrap & Icons ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Root-relative so it works from subfolders and later in static HTML -->
+  <link href="/content/Site.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+        <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+        Health Connect
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC" aria-controls="navHC" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navHC" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container py-4 flex-grow-1">
+
+    <h2 class="text-primary mb-3">MediCard – OFW with Beneficiaries in the Philippines</h2>
+    <p class="text-muted mb-4">
+      MediCard Kabayan is designed for Overseas Filipinos who want to provide quality healthcare for their loved ones
+      in the Philippines. It offers flexible annual coverage with access to MediCard’s nationwide accredited network.
+    </p>
+
+    <div class="alert alert-info small">
+      <strong>Note:</strong> This section focuses on the <strong>Kabayan</strong> plan for beneficiaries in the Philippines.
+      Other OFW-related options from MediCard can be added later if needed.
+    </div>
+
+    <!-- ==================== PLAN CARD ==================== -->
+    <div class="row g-4">
+
+      <!-- Kabayan Plan -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Kabayan (OFW with Beneficiaries)</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱16,524.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Annual health plan for loved ones of overseas Filipinos, with access to MediCard’s hospital and clinic network
+              and coverage for both outpatient and inpatient care.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              For beneficiaries in the Philippines • Annual healthcare coverage
+            </p>
+
+            <div class="mt-auto">
+              <a href="/insurancequotes.html?provider=MediCard&amp;plan=Kabayan%20(OFW%20with%20Beneficiaries)"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+
+              <a href="/scheduling.html?service=MediCard%20Kabayan%20-%20OFW%20Beneficiaries"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#kabayanModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+      <a href="/providers/medicare/medicare_insurance_assistance.html" class="btn btn-link hc-link-underline">
+        &larr; Back to MediCard / Medicare Insurance Assistance
+      </a>
+    </div>
+
+    <!-- ==================== MODAL ==================== -->
+    <!-- Standard tabs: Benefits | Conditions | Exclusions -->
+
+    <div class="modal fade" id="kabayanModal" tabindex="-1" aria-labelledby="kabayanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="kabayanLabel">MediCard Kabayan – OFW Beneficiaries</h5>
+              <small class="text-muted">Annual healthcare program for loved ones of overseas Filipinos</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱16,524.00 / year</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="kabayanTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="kabayan-benefits-tab"
+                        data-bs-toggle="tab" data-bs-target="#kabayan-benefits"
+                        type="button" role="tab" aria-controls="kabayan-benefits" aria-selected="true">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kabayan-conditions-tab"
+                        data-bs-toggle="tab" data-bs-target="#kabayan-conditions"
+                        type="button" role="tab" aria-controls="kabayan-conditions" aria-selected="false">
+                  Conditions
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="kabayan-exclusions-tab"
+                        data-bs-toggle="tab" data-bs-target="#kabayan-exclusions"
+                        type="button" role="tab" aria-controls="kabayan-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="kabayanTabsContent">
+
+              <!-- BENEFITS TAB -->
+              <div class="tab-pane fade show active" id="kabayan-benefits" role="tabpanel" aria-labelledby="kabayan-benefits-tab">
+                <h6>Plan Overview</h6>
+                <p>
+                  MediCard Kabayan is an annual healthcare program specifically designed for beneficiaries in the Philippines
+                  whose sponsor is working or living abroad. It aims to provide convenient, cashless healthcare access through
+                  MediCard’s accredited network.
+                </p>
+
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>
+                    <strong>Annual healthcare coverage</strong> for the enrolled beneficiary, with structured limits based on the chosen Kabayan option
+                    (room type and benefit limits defined in the agreement).
+                  </li>
+                  <li>
+                    <strong>In-patient hospital care</strong> in MediCard-accredited hospitals, including room and board, operating room,
+                    professional fees and medically necessary services, subject to plan limits.
+                  </li>
+                  <li>
+                    <strong>Out-patient consultations</strong> with MediCard-accredited physicians, including referral to specialists and
+                    ordering of laboratory or diagnostic procedures when needed.
+                  </li>
+                  <li>
+                    <strong>Emergency care services</strong> in accredited facilities, with validation that the case meets MediCard’s
+                    emergency criteria and is covered under the plan.
+                  </li>
+                  <li>
+                    Access to <strong>MediCard’s nationwide network</strong> of accredited hospitals and clinics; specific coverage and
+                    limits per plan are detailed in the official Kabayan benefit schedule.
+                  </li>
+                </ul>
+
+                <h6>Who Pays?</h6>
+                <p class="small text-muted mb-0">
+                  The sponsor (usually the OFW) pays the annual membership fee (starting at ₱16,524.00 per year), and the
+                  beneficiary in the Philippines avails of covered services cashless at MediCard-accredited providers, subject
+                  to plan rules and limits.
+                </p>
+              </div>
+
+              <!-- CONDITIONS TAB -->
+              <div class="tab-pane fade" id="kabayan-conditions" role="tabpanel" aria-labelledby="kabayan-conditions-tab">
+                <h6>Eligibility &amp; Enrollment</h6>
+                <ul>
+                  <li>
+                    Designed primarily for <strong>beneficiaries of overseas Filipinos</strong> (not just immediate family members, but also
+                    extended relatives or other designated individuals).
+                  </li>
+                  <li>
+                    Coverage is <strong>annual</strong> and renewable, with membership and benefit limits defined in the Kabayan agreement.
+                  </li>
+                  <li>
+                    Pre-existing conditions may be covered but are subject to specific limits and conditions in the benefit schedule.
+                  </li>
+                </ul>
+
+                <h6>How the Plan Works</h6>
+                <ul>
+                  <li>Sponsor chooses a Kabayan option and lists the beneficiary/beneficiaries, then pays the membership fee.</li>
+                  <li>
+                    For <strong>out-patient care</strong>, members can visit accredited hospitals/clinics and consult a primary accredited physician,
+                    who may request labs or refer to specialists.
+                  </li>
+                  <li>
+                    For <strong>in-patient care</strong>, confinement must be recommended by a MediCard-accredited physician, and a Letter of Authorization
+                    (LOA) is issued prior to confinement whenever applicable.
+                  </li>
+                  <li>
+                    All benefits are subject to the plan’s <strong>annual benefit limit</strong> and room type specified under the member’s Kabayan option.
+                  </li>
+                </ul>
+
+                <h6>Important Notes</h6>
+                <ul>
+                  <li>Non-emergency elective surgeries and admissions may require prior review and approval by MediCard’s medical review board.</li>
+                  <li>Coverage in non-accredited hospitals is generally not allowed, except under specific emergency reimbursement rules outlined in the agreement.</li>
+                </ul>
+              </div>
+
+              <!-- EXCLUSIONS TAB -->
+              <div class="tab-pane fade" id="kabayan-exclusions" role="tabpanel" aria-labelledby="kabayan-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <p class="small text-muted">
+                  The complete exclusions are detailed in the official MediCard Kabayan Healthcare Program Agreement. The list
+                  below is a simplified summary for quick reference.
+                </p>
+
+                <ul>
+                  <li><strong>Hospitalization or treatment outside the Philippines</strong> (unless specifically covered for foreign emergencies in the schedule).</li>
+                  <li><strong>Services in non-accredited hospitals/clinics</strong>, except where the contract explicitly allows emergency reimbursements.</li>
+                  <li><strong>Non-medically necessary items</strong> such as private nurses, extra food/bed, TV, fans and other amenities unrelated to medical management.</li>
+                  <li>Certain <strong>dermatologic, neurological or chronic conditions</strong> and other illnesses explicitly listed as excluded or limited in the benefit coverage.</li>
+                  <li>Any case involving <strong>fraud, misrepresentation, or non-disclosure of material information</strong> may result in denial of benefits and/or termination of coverage.</li>
+                </ul>
+
+                <p class="small text-muted mb-0">
+                  For final and binding definitions, limits, and exclusions, always refer to the official MediCard Kabayan Agreement
+                  and its attached Benefit Coverage Schedule.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+    <div class="container d-flex justify-content-between align-items-center small">
+      <span>&copy; 2025 Health Connect</span>
+      <span>Insurance • Home Health Care • Diagnostics</span>
+    </div>
+  </footer>
+
+  <!-- ===== Bootstrap JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

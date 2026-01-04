@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PhilCare Consultation</title>
+  <meta name="description" content="Health Connect is a one-stop healthcare portal offering insurance assistance, home health care, and diagnostic laboratory services in the Philippines." />
+  <meta name="keywords" content="health connect, philcare, consultation, healthcare philippines" />
+  <meta name="author" content="Health Connect Philippines" />
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- RULE: folder lowercase, filename preserved -->
+  <link href="/content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/default.html">
+      <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+      Health Connect
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navHC" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/default.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Main Content ===== -->
+<main class="container py-4">
+
+  <h2 class="text-primary mb-3">PhilCare – UNLI-CONSULT (Consultation Plans)</h2>
+  <p class="text-muted mb-4">
+    PhilCare UNLI-CONSULT plans provide unlimited consultations for one year, with access to
+    PhilCare-accredited doctors and DigiMed consultations via the HeyPhil 2.0 app.
+  </p>
+
+  <div class="row g-4">
+
+    <!-- Adults -->
+    <div class="col-md-4">
+      <div class="card h-100 provider-card">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">UNLI-CONSULT for Adults</h5>
+          <span class="badge bg-primary mb-2 fs-6">₱3,600.00</span>
+
+          <p class="card-text small text-muted">
+            Unlimited consultations for one year with PhilCare-accredited doctors nationwide,
+            including DigiMed online consults.
+          </p>
+
+          <div class="mt-auto">
+            <a href="../../insurancequotes.html?provider=PhilCare&amp;plan=UNLI-CONSULT%20for%20Adults"
+               class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+              Get Quote
+            </a>
+            <a href="../../scheduling.html?service=PhilCare%20Consultation%20-%20UNLI-CONSULT%20for%20Adults"
+               class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+              Schedule Appointment
+            </a>
+            <button class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#unliAdultModal">
+              Benefits
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kids -->
+    <div class="col-md-4">
+      <div class="card h-100 provider-card">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">UNLI-CONSULT for Kids</h5>
+          <span class="badge bg-primary mb-2 fs-6">₱3,700.00</span>
+
+          <p class="card-text small text-muted">
+            Unlimited pediatric consultations for one year plus DigiMed consults.
+          </p>
+
+          <div class="mt-auto">
+            <a href="../../insurancequotes.html?provider=PhilCare&amp;plan=UNLI-CONSULT%20for%20Kids"
+               class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+              Get Quote
+            </a>
+            <a href="../../scheduling.html?service=PhilCare%20Consultation%20-%20UNLI-CONSULT%20for%20Kids"
+               class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+              Schedule Appointment
+            </a>
+            <button class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#unliKidsModal">
+              Benefits
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seniors -->
+    <div class="col-md-4">
+      <div class="card h-100 provider-card">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">UNLI-CONSULT for 65+</h5>
+          <span class="badge bg-primary mb-2 fs-6">₱5,000.00</span>
+
+          <p class="card-text small text-muted">
+            Unlimited consultations for seniors 65+ with DigiMed support.
+          </p>
+
+          <div class="mt-auto">
+            <a href="../../insurancequotes.html?provider=PhilCare&amp;plan=UNLI-CONSULT%20for%2065%2b"
+               class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+              Get Quote
+            </a>
+            <a href="../../scheduling.html?service=PhilCare%20Consultation%20-%20UNLI-CONSULT%20for%2065%2b"
+               class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+              Schedule Appointment
+            </a>
+            <button class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#unliSeniorModal">
+              Benefits
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-4">
+    <a href="/providers/philcare/philcare_insurance_assistance.html" class="btn btn-link hc-link-underline">
+      &larr; Back to PhilCare Insurance Assistance
+    </a>
+  </div>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- UNLI-CONSULT for ADULTS MODAL -->
+    <div class="modal fade" id="unliAdultModal" tabindex="-1" aria-labelledby="unliAdultLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Header with price placeholder -->
+                <div class="modal-header d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="unliAdultLabel">UNLI-CONSULT for Adults</h5>
+                        <small class="text-muted">Unlimited consults for 1 year</small>
+                    </div>
+                    <span class="fw-bold text-primary fs-5">₱3,600.00</span>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- TABS -->
+                    <ul class="nav nav-tabs mb-3" id="unliAdultTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                    id="adult-benefits-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#adult-benefits"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="adult-benefits"
+                                    aria-selected="true">
+                                Benefits
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="adult-dental-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#adult-dental"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="adult-dental"
+                                    aria-selected="false">
+                                Dental
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="adult-exclusions-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#adult-exclusions"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="adult-exclusions"
+                                    aria-selected="false">
+                                Exclusions
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="unliAdultTabsContent">
+
+                        <!-- BENEFITS -->
+                        <div class="tab-pane fade show active"
+                             id="adult-benefits"
+                             role="tabpanel"
+                             aria-labelledby="adult-benefits-tab">
+
+                            <h6>What’s Included</h6>
+                            <ul>
+                                <li>✅ Unlimited consultations for 1 year with PhilCare-accredited doctors nationwide
+                                    (Family Medicine, Internal Medicine, Cardiologists, Nephrologists, Pulmonologists,
+                                    Gastroenterologists, and Dentists)</li>
+                                <li>✅ Unlimited DigiMed consultations via HeyPhil 2.0 App</li>
+                            </ul>
+                        </div>
+
+                        <!-- DENTAL -->
+                        <div class="tab-pane fade"
+                             id="adult-dental"
+                             role="tabpanel"
+                             aria-labelledby="adult-dental-tab">
+
+                            <h6>Dental Services</h6>
+                            <ul>
+                                <li>🦷 Dental consultation</li>
+                                <li>🦷 Simple gum treatment (lesions, wounds, burns)</li>
+                                <li>🦷 Unlimited temporary fillings</li>
+                                <li>🦷 Re-cementation of loose crowns, inlays, onlays, and fixed bridges</li>
+                                <li>🦷 Simple repair and adjustment of dentures</li>
+                                <li>🦷 Unlimited simple tooth extractions</li>
+                                <li>🦷 Desensitization of hypersensitive teeth</li>
+                                <li>🦷 Annual prophylaxis (light cases only)</li>
+                            </ul>
+                        </div>
+
+                        <!-- EXCLUSIONS -->
+                        <div class="tab-pane fade"
+                             id="adult-exclusions"
+                             role="tabpanel"
+                             aria-labelledby="adult-exclusions-tab">
+
+                            <h6>Exclusions</h6>
+                            <ul>
+                                <li>⚠️ Maternity-related cases</li>
+                                <li>⚠️ Behavioral, developmental, or psychiatric disorders</li>
+                                <li>⚠️ Psychosomatic illnesses (whether congenital or acquired)</li>
+                                <li>⚠️ Consultations with medical specializations not listed under the covered services</li>
+                            </ul>
+
+                            <p class="mt-3 small text-muted">
+                                This summary is for reference only. Final coverage is based on PhilCare’s
+                                official terms and conditions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNLI-CONSULT for KIDS MODAL -->
+    <div class="modal fade" id="unliKidsModal" tabindex="-1" aria-labelledby="unliKidsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Header with price placeholder -->
+                <div class="modal-header d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="unliKidsLabel">UNLI-CONSULT for Kids</h5>
+                        <small class="text-muted">Unlimited pediatric consults for 1 year</small>
+                    </div>
+                    <span class="fw-bold text-primary fs-5">₱3,700.00</span>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- TABS -->
+                    <ul class="nav nav-tabs mb-3" id="unliKidsTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                    id="kids-benefits-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#kids-benefits"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="kids-benefits"
+                                    aria-selected="true">
+                                Benefits
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="kids-dental-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#kids-dental"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="kids-dental"
+                                    aria-selected="false">
+                                Dental
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="kids-exclusions-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#kids-exclusions"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="kids-exclusions"
+                                    aria-selected="false">
+                                Exclusions
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="unliKidsTabsContent">
+
+                        <!-- BENEFITS -->
+                        <div class="tab-pane fade show active"
+                             id="kids-benefits"
+                             role="tabpanel"
+                             aria-labelledby="kids-benefits-tab">
+
+                            <h6>What’s Included</h6>
+                            <ul>
+                                <li>✅ Unlimited consultations for one (1) year with 9,600+ PhilCare-accredited Pediatricians nationwide.</li>
+                                <li>✅ Unlimited DigiMed consultations via HeyPhil 2.0 App.</li>
+                            </ul>
+                        </div>
+
+                        <!-- DENTAL -->
+                        <div class="tab-pane fade"
+                             id="kids-dental"
+                             role="tabpanel"
+                             aria-labelledby="kids-dental-tab">
+
+                            <h6>Dental Services</h6>
+                            <ul>
+                                <li>🦷 Dental consultation</li>
+                                <li>🦷 Simple gum treatment (lesions, wounds, burns)</li>
+                                <li>🦷 Unlimited temporary fillings</li>
+                                <li>🦷 Re-cementation of loose crowns, inlays, onlays, and fixed bridges</li>
+                                <li>🦷 Simple repair and adjustment of dentures</li>
+                                <li>🦷 Unlimited simple tooth extractions</li>
+                                <li>🦷 Desensitization of hypersensitive teeth</li>
+                                <li>🦷 Annual prophylaxis (light cases only)</li>
+                            </ul>
+                        </div>
+
+                        <!-- EXCLUSIONS -->
+                        <div class="tab-pane fade"
+                             id="kids-exclusions"
+                             role="tabpanel"
+                             aria-labelledby="kids-exclusions-tab">
+
+                            <h6>Exclusions</h6>
+                            <ul>
+                                <li>⚠️ Maternity-related cases</li>
+                                <li>⚠️ Behavioral, developmental, or psychiatric disorders</li>
+                                <li>⚠️ Psychosomatic illnesses (whether congenital or acquired)</li>
+                                <li>⚠️ Consultations with medical specializations not listed under the covered services</li>
+                            </ul>
+
+                            <p class="mt-3 small text-muted">
+                                This summary is for reference only. Final coverage is based on PhilCare’s
+                                official terms and conditions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UNLI-CONSULT for 65+ MODAL -->
+    <div class="modal fade" id="unliSeniorModal" tabindex="-1" aria-labelledby="unliSeniorLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Header with price placeholder -->
+                <div class="modal-header d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5 class="modal-title" id="unliSeniorLabel">UNLI-CONSULT for 65+</h5>
+                        <small class="text-muted">Unlimited consults for seniors 65+ for 1 year</small>
+                    </div>
+                    <span class="fw-bold text-primary fs-5">₱5,000.00</span>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- TABS -->
+                    <ul class="nav nav-tabs mb-3" id="unliSeniorTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                    id="senior-benefits-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#senior-benefits"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="senior-benefits"
+                                    aria-selected="true">
+                                Benefits
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="senior-dental-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#senior-dental"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="senior-dental"
+                                    aria-selected="false">
+                                Dental
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="senior-exclusions-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#senior-exclusions"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="senior-exclusions"
+                                    aria-selected="false">
+                                Exclusions
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="unliSeniorTabsContent">
+
+                        <!-- BENEFITS -->
+                        <div class="tab-pane fade show active"
+                             id="senior-benefits"
+                             role="tabpanel"
+                             aria-labelledby="senior-benefits-tab">
+
+                            <h6>What’s Included</h6>
+                            <ul>
+                                <li>✅ Unlimited consultations for 1 year with PhilCare-accredited doctors nationwide
+                                    (Family Medicine, Internal Medicine, Cardiologists, Nephrologists, Pulmonologists,
+                                    Gastroenterologists, and Dentists)</li>
+                                <li>✅ Unlimited DigiMed consultations via HeyPhil 2.0 App</li>
+                            </ul>
+                        </div>
+
+                        <!-- DENTAL -->
+                        <div class="tab-pane fade"
+                             id="senior-dental"
+                             role="tabpanel"
+                             aria-labelledby="senior-dental-tab">
+
+                            <h6>Dental Services</h6>
+                            <ul>
+                                <li>🦷 Dental consultation</li>
+                                <li>🦷 Simple gum treatment (lesions, wounds, burns)</li>
+                                <li>🦷 Unlimited temporary fillings</li>
+                                <li>🦷 Re-cementation of loose crowns, inlays, onlays, and fixed bridges</li>
+                                <li>🦷 Simple repair and adjustment of dentures</li>
+                                <li>🦷 Unlimited simple tooth extractions</li>
+                                <li>🦷 Desensitization of hypersensitive teeth</li>
+                                <li>🦷 Annual prophylaxis (light cases only)</li>
+                            </ul>
+                        </div>
+
+                        <!-- EXCLUSIONS -->
+                        <div class="tab-pane fade"
+                             id="senior-exclusions"
+                             role="tabpanel"
+                             aria-labelledby="senior-exclusions-tab">
+
+                            <h6>Exclusions</h6>
+                            <ul>
+                                <li>⚠️ Maternity-related cases</li>
+                                <li>⚠️ Behavioral, developmental, or psychiatric disorders</li>
+                                <li>⚠️ Psychosomatic illnesses (whether congenital or acquired)</li>
+                                <li>⚠️ Consultations with medical specializations not listed under the covered services</li>
+                            </ul>
+
+                            <p class="mt-3 small text-muted">
+                                This summary is for reference only. Final coverage is based on PhilCare’s
+                                official terms and conditions.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <span>&copy; 2025 Health Connect</span>
+    <span>Insurance • Home Health Care • Diagnostics</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

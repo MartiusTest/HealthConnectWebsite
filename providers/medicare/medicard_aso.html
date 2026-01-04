@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Global SEO Defaults ===== -->
+  <title>MediCard – Administrative Services Only (ASO)</title>
+  <meta name="description" content="Health Connect is a one-stop healthcare portal offering insurance assistance, home health care, and diagnostic laboratory services in the Philippines." />
+  <meta name="keywords" content="health connect, insurance assistance, home health care, diagnostic laboratory, radiology, laboratory, philippines" />
+  <meta name="author" content="Health Connect Philippines" />
+
+  <!-- ===== Bootstrap & Icons ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Root-relative so it works from subfolders and later in static HTML -->
+  <link href="/content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+        <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+        Health Connect
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC" aria-controls="navHC" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navHC" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/Default.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container py-4">
+
+    <h2 class="text-primary mb-3">MediCard – Administrative Services Only (ASO)</h2>
+    <p class="text-muted mb-4">
+      MediCard Select (ASO) is a flexible, revolving-fund health program for individuals, families,
+      and companies. You maintain a fund with MediCard and whatever is not used may be refunded at
+      the end of the agreed term, subject to MediCard’s policies.
+    </p>
+
+    <!-- PLAN CARD -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">MediCard Select (ASO)</h5>
+            <span class="badge bg-primary mb-2 fs-6">Fund starts at ₱30,000.00</span>
+            <p class="card-text small text-muted mb-2">
+              Revolving fund health plan for individuals, families, and companies – maintain a fund
+              with MediCard and refund whatever is not used (per MediCard terms).
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              Administrative Services Only • Revolving Health Fund
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=MediCard%20Select%20ASO"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20ASO%20-%20MediCard%20Select"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#medicardSelectASOModal">
+                Benefits
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <a href="/providers/medicare/medicare_insurance_assistance.html" class="btn btn-link hc-link-underline">
+        &larr; Back to MediCard Insurance Assistance
+      </a>
+    </div>
+
+    <!-- ==================== MODAL: MEDICARD SELECT (ASO) ==================== -->
+    <div class="modal fade" id="medicardSelectASOModal" tabindex="-1" aria-labelledby="medicardSelectASOLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="medicardSelectASOLabel">MediCard Select (ASO)</h5>
+              <small class="text-muted">
+                Revolving fund healthcare program • Fund starts at ₱30,000.00 per year
+              </small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱30,000.00<span class="fs-6">+</span></span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <ul class="nav nav-tabs mb-3" id="medicardSelectTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active"
+                        id="medicardSelect-desc-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#medicardSelect-desc"
+                        type="button" role="tab"
+                        aria-controls="medicardSelect-desc"
+                        aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="medicardSelect-benefits-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#medicardSelect-benefits"
+                        type="button" role="tab"
+                        aria-controls="medicardSelect-benefits"
+                        aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="medicardSelect-exclusions-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#medicardSelect-exclusions"
+                        type="button" role="tab"
+                        aria-controls="medicardSelect-exclusions"
+                        aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="medicardSelectTabsContent">
+
+              <!-- DESCRIPTION -->
+              <div class="tab-pane fade show active" id="medicardSelect-desc" role="tabpanel" aria-labelledby="medicardSelect-desc-tab">
+                <h6>Plan Overview</h6>
+                <p>
+                  <strong>MediCard Select</strong> is an Administrative Services Only (ASO) program
+                  designed for <strong>individuals, families, and companies</strong>. Instead of paying
+                  a fixed HMO premium per member, you:
+                </p>
+                <ul>
+                  <li>Set up a <strong>revolving healthcare fund</strong> with MediCard.</li>
+                  <li>Use the fund to pay for eligible medical services availed within MediCard’s network.</li>
+                  <li>May have <strong>unused fund refunded</strong> according to MediCard’s terms and conditions.</li>
+                </ul>
+                <p class="small text-muted mb-0">
+                  Note: Exact coverage, inclusions, and rules for fund usage and refund are governed by
+                  MediCard’s official MediCard Select documentation and agreement.
+                </p>
+              </div>
+
+              <!-- BENEFITS -->
+              <div class="tab-pane fade" id="medicardSelect-benefits" role="tabpanel" aria-labelledby="medicardSelect-benefits-tab">
+                <h6>Key Features &amp; Benefits</h6>
+                <ul>
+                  <li>
+                    <strong>Revolving healthcare fund</strong> – starts at ₱30,000.00 per year,
+                    configured based on your needs (individual, family, or company).
+                  </li>
+                  <li><strong>Pay-as-utilized</strong> – the fund is used only when members avail eligible medical services.</li>
+                  <li><strong>Potential refund of unused fund</strong> at the end of the agreement period, as stated in MediCard’s terms.</li>
+                  <li><strong>Access to MediCard’s accredited providers and clinics</strong> for covered services, subject to the final agreement.</li>
+                  <li>Can be structured for <strong>individuals, families, or groups of employees</strong>.</li>
+                </ul>
+
+                <p class="small text-muted mb-0">
+                  The exact list of covered services (e.g., consultations, ER, diagnostics, hospitalization,
+                  etc.) is defined in the signed MediCard Select ASO agreement and may vary per client.
+                </p>
+              </div>
+
+              <!-- EXCLUSIONS -->
+              <div class="tab-pane fade" id="medicardSelect-exclusions" role="tabpanel" aria-labelledby="medicardSelect-exclusions-tab">
+                <h6>General Notes &amp; Exclusions</h6>
+                <p>
+                  MediCard Select is a <strong>fund-based health program</strong>. While specific
+                  exclusions are defined in MediCard’s official policy documents, typical limitations may include:
+                </p>
+                <ul>
+                  <li>Non-medically necessary services, purely cosmetic procedures, and experimental treatments.</li>
+                  <li>Items or services not covered in the signed MediCard Select ASO agreement.</li>
+                  <li>Benefits beyond the available revolving fund amount.</li>
+                  <li>Other standard MediCard exclusions and limitations as stated in the <strong>MediCard Select</strong> terms and conditions.</li>
+                </ul>
+                <p class="small text-muted mb-0">
+                  For a complete and authoritative list of inclusions and exclusions, always refer to
+                  MediCard’s official MediCard Select brochure, contract, and policy wording.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+    <div class="container d-flex justify-content-between align-items-center small">
+      <span>&copy; 2025 Health Connect</span>
+      <span>Insurance • Home Health Care • Diagnostics</span>
+    </div>
+  </footer>
+
+  <!-- ===== Bootstrap JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MediCard – SMEs &amp; Corporations</title>
+  <meta name="description" content="Health Connect is a one-stop healthcare portal offering insurance assistance, home health care, and diagnostic laboratory services in the Philippines." />
+  <meta name="keywords" content="health connect, insurance assistance, home health care, diagnostic laboratory, radiology, laboratory, philippines" />
+  <meta name="author" content="Health Connect Philippines" />
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- RULE: folder lowercase, keep filename exact -->
+  <link href="/content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+        <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+        Health Connect
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navHC" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/default.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container py-4">
+
+    <h2 class="text-primary mb-3">MediCard – SMEs &amp; Corporations</h2>
+    <p class="text-muted mb-4">
+      MediCard offers flexible healthcare programs for small and medium enterprises (SMEs) and large corporations,
+      designed to protect employees with comprehensive medical coverage and access to MediCard’s nationwide network
+      of accredited hospitals, clinics, and doctors.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- MediCard Select (SME & Corporations) -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">MediCard Select</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱30,000.00</span>
+            <p class="card-text small text-muted mb-2">
+              Comprehensive HMO plan for employees, with inpatient, outpatient, ER, and preventive care benefits.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              SMEs &amp; Corporations • HMO • Comprehensive Coverage
+            </p>
+
+            <div class="mt-auto">
+              <a href="../../insurancequotes.html?provider=MediCard&amp;plan=MediCard%20Select%20(SME)"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+
+              <a href="../../scheduling.html?service=MediCard%20SME%20-%20MediCard%20Select"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mediCardSelectSmeModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HMO Plans for SME & Corporations (no Benefits button) -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">HMO Plans for SME &amp; Corporations</h5>
+            <p class="card-text small text-muted mb-2">
+              Customized corporate HMO packages tailored to your company size, budget, and employee coverage needs.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              For Employers • Customized Corporate Programs
+            </p>
+
+            <div class="mt-auto">
+              <a href="../../insurancequotes.html?provider=MediCard&amp;plan=HMO%20Plans%20for%20SME%20and%20Corporations"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+
+              <a href="../../scheduling.html?service=MediCard%20SME%20-%20Corporate%20Plan%20Consult"
+                 class="btn btn-outline-primary btn-sm w-100 btn-hc-action">
+                Schedule Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+      <a href="/providers/medicare/medicare_insurance_assistance.html" class="btn btn-link hc-link-underline">
+        &larr; Back to MediCard Insurance Assistance
+      </a>
+    </div>
+
+    <!-- ==================== MODAL: MediCard Select (SME & Corporations) ==================== -->
+    <div class="modal fade" id="mediCardSelectSmeModal" tabindex="-1" aria-labelledby="mediCardSelectSmeLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="mediCardSelectSmeLabel">MediCard Select – SMEs &amp; Corporations</h5>
+              <small class="text-muted">Comprehensive corporate HMO coverage • Indicative annual premium</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱30,000.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <ul class="nav nav-tabs mb-3" id="mediCardSelectTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active"
+                        id="select-benefits-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#select-benefits"
+                        type="button"
+                        role="tab"
+                        aria-controls="select-benefits"
+                        aria-selected="true">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="select-coverage-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#select-coverage"
+                        type="button"
+                        role="tab"
+                        aria-controls="select-coverage"
+                        aria-selected="false">
+                  Coverage &amp; Conditions
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="select-exclusions-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#select-exclusions"
+                        type="button"
+                        role="tab"
+                        aria-controls="select-exclusions"
+                        aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="mediCardSelectTabsContent">
+
+              <!-- BENEFITS TAB -->
+              <div class="tab-pane fade show active" id="select-benefits" role="tabpanel" aria-labelledby="select-benefits-tab">
+                <h6>Plan Description</h6>
+                <p>
+                  MediCard Select is a <strong>comprehensive HMO program</strong> designed for employees of SMEs and corporations,
+                  providing access to MediCard’s extensive network of accredited hospitals, clinics, and doctors.
+                  It bundles inpatient, outpatient, emergency, preventive, and dental services in a single program.
+                </p>
+
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li><strong>Inpatient care</strong> – coverage for room and board, physicians’ fees, and medically necessary confinement services (subject to plan limits).</li>
+                  <li><strong>Emergency care</strong> – emergency treatment for covered illnesses and injuries in accredited facilities.</li>
+                  <li><strong>Outpatient services</strong> – consultations in accredited clinics and hospitals; access to MediCard-owned clinics where applicable.</li>
+                  <li><strong>Preventive healthcare</strong> – annual physical examination and selected preventive tests as may be included in the program.</li>
+                  <li><strong>Dental care</strong> – basic dental services through accredited dentists, depending on the final package design.</li>
+                  <li><strong>Nationwide network</strong> – access to MediCard’s network of doctors and hospitals nationwide.</li>
+                </ul>
+
+                <p class="small text-muted">
+                  Final inclusions, limits, and premiums for MediCard Select will depend on the actual
+                  corporate proposal and employee census.
+                </p>
+              </div>
+
+              <!-- COVERAGE & CONDITIONS TAB -->
+              <div class="tab-pane fade" id="select-coverage" role="tabpanel" aria-labelledby="select-coverage-tab">
+                <h6>Typical Corporate Coverage Inclusions</h6>
+                <ul>
+                  <li>Coverage for medically necessary treatments due to illness or injury, subject to plan limits and schedules.</li>
+                  <li>Use of accredited hospitals, clinics, and physicians within MediCard’s network.</li>
+                  <li>Access to emergency services in accredited facilities, subject to emergency definitions in the policy.</li>
+                  <li>Optional riders or enhanced coverage (e.g., higher room types, additional outpatient benefits) depending on company budget.</li>
+                </ul>
+
+                <h6>General Conditions</h6>
+                <ul>
+                  <li>Employees must be enrolled by the company under an agreed corporate contract.</li>
+                  <li>Waiting periods may apply for certain conditions, procedures, or benefit categories.</li>
+                  <li>Coverage is subject to annual benefit limits, per illness limits, and room &amp; board limits as specified in the proposal.</li>
+                </ul>
+
+                <p class="small text-muted">
+                  Exact coverage details are based on the official MediCard Select corporate proposal for your company.
+                </p>
+              </div>
+
+              <!-- EXCLUSIONS TAB -->
+              <div class="tab-pane fade" id="select-exclusions" role="tabpanel" aria-labelledby="select-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <p class="small">
+                  The following items are typically not covered under corporate HMO programs.
+                  Please refer to the official MediCard policy for the complete list:
+                </p>
+                <ul>
+                  <li>Conditions and procedures that are not medically necessary or are purely for convenience or aesthetics.</li>
+                  <li>Self-inflicted injuries, substance abuse, and injuries related to gross negligence or misconduct.</li>
+                  <li>Experimental or investigational treatments not recognized as standard of care.</li>
+                  <li>Services obtained from non-accredited providers, unless explicitly allowed by the plan.</li>
+                  <li>Occupational injuries or illnesses covered by workers’ compensation or similar laws.</li>
+                  <li>Other exclusions as specified in MediCard’s corporate HMO contract and policy guidelines.</li>
+                </ul>
+
+                <p class="small text-muted mb-0">
+                  For an exact list of exclusions, your HR or benefits administrator may request the detailed MediCard Select
+                  brochure or policy schedule from MediCard.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+    <div class="container d-flex justify-content-between align-items-center small">
+      <span>&copy; 2025 Health Connect</span>
+      <span>Insurance • Home Health Care • Diagnostics</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

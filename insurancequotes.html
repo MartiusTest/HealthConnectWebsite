@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===== Global SEO Defaults ===== -->
+    <title>Insurance Quote Request</title>
+    <meta name="description" content="Request an insurance quote through Health Connect for various providers and plans." />
+    <meta name="keywords" content="health connect, insurance quote, philippine health insurance, pacific cross, oona, philcare, medicare, kaiser, alpha insurance" />
+    <meta name="author" content="Health Connect Philippines" />
+
+    <!-- ===== Bootstrap & Icons ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Health Connect CSS (lowercase path) -->
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+                <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+                Health Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navHC" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main class="container py-4">
+        <h2 class="text-primary mb-3">Insurance Quote Request</h2>
+        <p class="text-muted mb-4">
+            Tell us a bit about yourself and the type of insurance coverage you need.
+            Health Connect will forward your request to the appropriate insurance provider
+            so they can contact you with plan options and pricing.
+        </p>
+
+        <div class="row g-4">
+            <!-- FORM COLUMN -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- We’ll show any client-side validation normally using Bootstrap -->
+                        <form id="quoteForm" class="needs-validation" novalidate method="post" action="insurancequotes.php">
+                            <!-- Personal Info -->
+                            <h5 class="mt-2 mb-3">Your Information</h5>
+
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="full_name" name="full_name"
+                                       class="form-control"
+                                       placeholder="Juan Dela Cruz" required />
+                                <div class="invalid-feedback">
+                                    Please enter your full name.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" id="email" name="email"
+                                       class="form-control"
+                                       placeholder="you@example.com" required />
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Mobile Number
+                                </label>
+                                <input type="text" id="phone" name="phone"
+                                       class="form-control"
+                                       placeholder="+63 9XX XXX XXXX" />
+                                <div class="invalid-feedback">
+                                    Please enter a valid mobile number.
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <!-- Insurance Details -->
+                            <h5 class="mb-3">Insurance Details</h5>
+
+                            <div class="mb-3">
+                                <label for="provider" class="form-label">
+                                    Insurance Provider <span class="text-danger">*</span>
+                                </label>
+                                <select id="provider" name="provider" class="form-select" required>
+                                    <option value="">-- Select Provider --</option>
+                                    <option value="PacificCross">Pacific Cross</option>
+                                    <option value="OONA">OONA</option>
+                                    <option value="PhilCare">PhilCare</option>
+                                    <option value="Medicare">Medicare</option>
+                                    <option value="Alpha">Alpha Insurance</option>
+                                    <option value="Kaiser">Kaiser</option>
+                                    <option value="Other">Other / Not Sure</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select an insurance provider.
+                                </div>
+                                <div class="form-text">
+                                    If you clicked from a specific provider page, this may already be selected.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="plan" class="form-label">
+                                    Plan Name (optional)
+                                </label>
+                                <input type="text" id="plan" name="plan"
+                                       class="form-control"
+                                       placeholder="e.g., Blue Royal, Select ER, International Travel" />
+                                <div class="form-text">
+                                    If you are not sure, you may leave this blank.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    Additional Information (optional)
+                                </label>
+                                <textarea id="message" name="message"
+                                          class="form-control"
+                                          rows="4"
+                                          placeholder="Tell us about your requirements (e.g., number of persons, age range, budget, coverage preferences)"></textarea>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit Quote Request
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary">
+                                    Clear Form
+                                </button>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                By submitting this form, you agree that Health Connect may share your information
+                                with partner insurance providers for the purpose of preparing your quotation or
+                                contacting you about your inquiry.
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDE INFO COLUMN -->
+            <div class="col-lg-4">
+                <div class="card border-0 bg-light h-100">
+                    <div class="card-body">
+                        <h5 class="mb-3">What happens next?</h5>
+                        <ul class="small text-muted mb-3">
+                            <li>Your request will be sent securely to Health Connect.</li>
+                            <li>We will route your inquiry to the appropriate insurance provider.</li>
+                            <li>A representative may contact you by email or phone for follow-up questions.</li>
+                            <li>You’ll receive plan options, pricing, and next steps for enrollment.</li>
+                        </ul>
+
+                        <h6 class="mb-2">Tips for faster processing</h6>
+                        <ul class="small text-muted">
+                            <li>Provide an active email and mobile number.</li>
+                            <li>Include age, number of persons, and preferred coverage (in the message box).</li>
+                            <li>Indicate if the plan is for individual, family, group, or company use.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <span>&copy; 2025 Health Connect</span>
+            <span>Insurance • Home Health Care • Diagnostics</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + simple validation -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById('quoteForm');
+            if (!form) return;
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+</html>

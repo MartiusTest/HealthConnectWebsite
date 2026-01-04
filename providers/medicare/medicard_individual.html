@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== Global SEO Defaults ===== -->
+  <title>MediCard – Individual Plans</title>
+  <meta name="description" content="Health Connect is a one-stop healthcare portal offering insurance assistance, home health care, and diagnostic laboratory services in the Philippines." />
+  <meta name="keywords" content="health connect, insurance assistance, home health care, diagnostic laboratory, radiology, laboratory, philippines" />
+  <meta name="author" content="Health Connect Philippines" />
+
+  <!-- ===== Bootstrap & Icons ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Root-relative so it works from subfolders and later in static HTML -->
+  <link href="/content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+        <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+        Health Connect
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC" aria-controls="navHC" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navHC" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/default.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container py-4">
+    <h2 class="text-primary mb-3">MediCard – Individual Healthcare Programs</h2>
+    <p class="text-muted mb-4">
+      MediCard’s Individual programs offer a range of HMO and health card options – from full HMO coverage
+      to ER-focused and prepaid primary care plans – to support different health and budget needs.
+    </p>
+
+    <!-- ==================== PLAN CARDS ==================== -->
+    <div class="row g-4">
+
+      <!-- STANDARD PLAN -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Standard Plan</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱10,739.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Classic HMO coverage for individuals with access to MediCard’s accredited hospitals,
+              clinics, and doctors.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              HMO • Inpatient &amp; Outpatient • Preventive Care
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=Standard"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20Standard"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#standardPlanModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIP PLAN -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">VIP Plan</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱25,379.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Premium HMO plan with wider access to hospitals and higher room and board limits.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              Premium HMO • Enhanced Limits
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=VIP"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20VIP"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#vipPlanModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HEALTH PLUS -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Health Plus</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱1,545.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Affordable prepaid health card for primary care and basic outpatient services.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              Prepaid • Primary Care • OPD
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=Health%20Plus"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20Health%20Plus"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#healthPlusModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RxER -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">RxER</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱2,378.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Specialized card for selected ER cases, preventive care and unlimited clinic consultations.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              ER-Focused • Preventive • Unlimited OPD
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=RxER"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20RxER"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#rxerModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY MEDICARD -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">My MediCard</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱3,600.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              Flexible, card-based HMO program for individuals who want outpatient coverage and easy access to care.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              Card-Based • Outpatient • Flexible
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=My%20MediCard"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20My%20MediCard"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myMedicardModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDICARD SELECT -->
+      <div class="col-md-4">
+        <div class="card h-100 provider-card">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">MediCard Select</h5>
+            <span class="badge bg-primary mb-2 fs-6">₱30,000.00 / year</span>
+            <p class="card-text small text-muted mb-2">
+              High-value plan with generous inpatient, outpatient, and preventive benefits in selected facilities.
+            </p>
+            <p class="fw-semibold text-primary mb-3">
+              High Limit • Inpatient &amp; Outpatient
+            </p>
+
+            <div class="mt-auto">
+              <a href="/InsuranceQuotes.html?provider=MediCard&amp;plan=MediCard%20Select"
+                 class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">
+                Get Quote
+              </a>
+              <a href="/Scheduling.html?service=MediCard%20Individual%20-%20MediCard%20Select"
+                 class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">
+                Schedule Appointment
+              </a>
+              <button type="button"
+                      class="btn btn-outline-primary btn-sm w-100 btn-hc-action"
+                      data-bs-toggle="modal"
+                      data-bs-target="#medicardSelectModal">
+                Benefits
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+      <a href="/providers/medicare/medicare_insurance_assistance.html" class="btn btn-link hc-link-underline">
+        &larr; Back to MediCard Insurance Assistance
+      </a>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+    <!-- All plans use tabs: Description | Benefits | Exclusions -->
+
+    <!-- STANDARD PLAN MODAL -->
+    <div class="modal fade" id="standardPlanModal" tabindex="-1" aria-labelledby="standardPlanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="standardPlanLabel">Standard Plan</h5>
+              <small class="text-muted">Traditional HMO coverage for individuals with inpatient, outpatient and preventive benefits.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱10,739.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="standardTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="standard-desc-tab" data-bs-toggle="tab" data-bs-target="#standard-desc" type="button" role="tab" aria-controls="standard-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="standard-benefits-tab" data-bs-toggle="tab" data-bs-target="#standard-benefits" type="button" role="tab" aria-controls="standard-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="standard-exclusions-tab" data-bs-toggle="tab" data-bs-target="#standard-exclusions" type="button" role="tab" aria-controls="standard-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="standardTabsContent">
+              <div class="tab-pane fade show active" id="standard-desc" role="tabpanel" aria-labelledby="standard-desc-tab">
+                <p>
+                  The Standard Plan is a comprehensive HMO program for individuals. It typically covers
+                  medical care in MediCard-accredited hospitals and clinics, including confinement,
+                  outpatient visits and preventive services, subject to MediCard’s terms and conditions.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="standard-benefits" role="tabpanel" aria-labelledby="standard-benefits-tab">
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>Inpatient confinement coverage in accredited hospitals (room and board, professional fees, basic labs/diagnostics).</li>
+                  <li>Outpatient consultations with accredited physicians and specialists, as allowed under plan rules.</li>
+                  <li>Coverage for medically necessary laboratory and diagnostic procedures.</li>
+                  <li>Access to preventive services (e.g., annual physical exam) in selected MediCard facilities, subject to guidelines.</li>
+                  <li>Use of MediCard’s provider network and pre-authorization process for eligible procedures.</li>
+                </ul>
+                <p class="small text-muted">
+                  Exact limits, covered services, and provider lists are based on MediCard’s official policy
+                  schedule for the Standard Plan.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="standard-exclusions" role="tabpanel" aria-labelledby="standard-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <p class="small">The Standard Plan follows MediCard’s usual HMO exclusions. Common examples include:</p>
+                <ul>
+                  <li>Conditions or procedures not medically necessary or not covered under the plan schedule.</li>
+                  <li>Purely cosmetic surgery, non-medically required dental work, and similar elective procedures.</li>
+                  <li>Care related to self-inflicted injury, illegal acts, or substance abuse, if excluded in the policy.</li>
+                  <li>Services obtained from non-accredited providers without approval, unless emergency rules apply.</li>
+                  <li>Other limitations and waiting periods as indicated in MediCard’s full policy wording.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP PLAN MODAL -->
+    <div class="modal fade" id="vipPlanModal" tabindex="-1" aria-labelledby="vipPlanLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="vipPlanLabel">VIP Plan</h5>
+              <small class="text-muted">Premium HMO with higher limits and wider hospital access.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱25,379.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="vipTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="vip-desc-tab" data-bs-toggle="tab" data-bs-target="#vip-desc" type="button" role="tab" aria-controls="vip-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="vip-benefits-tab" data-bs-toggle="tab" data-bs-target="#vip-benefits" type="button" role="tab" aria-controls="vip-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="vip-exclusions-tab" data-bs-toggle="tab" data-bs-target="#vip-exclusions" type="button" role="tab" aria-controls="vip-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="vipTabsContent">
+              <div class="tab-pane fade show active" id="vip-desc" role="tabpanel" aria-labelledby="vip-desc-tab">
+                <p>
+                  The VIP Plan is a higher-tier HMO program for individuals who want more generous limits,
+                  better room accommodations and broader access to facilities in the MediCard network.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="vip-benefits" role="tabpanel" aria-labelledby="vip-benefits-tab">
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>Enhanced coverage for inpatient confinement, including higher room and board category.</li>
+                  <li>Outpatient consultations with a wider range of specialists in accredited facilities.</li>
+                  <li>Preventive care and routine check-ups in MediCard clinics, according to plan rules.</li>
+                  <li>Coverage for medically necessary diagnostics, procedures and therapies within set limits.</li>
+                  <li>Access to a larger accredited hospital network for eligible services.</li>
+                </ul>
+                <p class="small text-muted">
+                  Benefit levels and eligible providers follow MediCard’s official VIP Plan schedule.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="vip-exclusions" role="tabpanel" aria-labelledby="vip-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <ul>
+                  <li>Non-covered and non-medically necessary procedures, cosmetic treatments and similar services.</li>
+                  <li>Benefits beyond stated room types, limits or ceilings in the VIP Plan guide.</li>
+                  <li>Care related to excluded conditions, high-risk activities, or non-covered illnesses.</li>
+                  <li>Services availed without required approval, except when emergency provisions apply.</li>
+                  <li>Other exclusions and limitations defined in MediCard’s VIP Plan documentation.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEALTH PLUS MODAL -->
+    <div class="modal fade" id="healthPlusModal" tabindex="-1" aria-labelledby="healthPlusLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="healthPlusLabel">Health Plus</h5>
+              <small class="text-muted">Prepaid card for basic outpatient and primary care services.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱1,545.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="hpTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="hp-desc-tab" data-bs-toggle="tab" data-bs-target="#hp-desc" type="button" role="tab" aria-controls="hp-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="hp-benefits-tab" data-bs-toggle="tab" data-bs-target="#hp-benefits" type="button" role="tab" aria-controls="hp-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="hp-exclusions-tab" data-bs-toggle="tab" data-bs-target="#hp-exclusions" type="button" role="tab" aria-controls="hp-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="hpTabsContent">
+              <div class="tab-pane fade show active" id="hp-desc" role="tabpanel" aria-labelledby="hp-desc-tab">
+                <p>
+                  Health Plus is a prepaid health card that is typically used for outpatient primary care.
+                  It is designed for individuals who want simple, budget-friendly access to consultations and
+                  basic diagnostics in MediCard facilities.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="hp-benefits" role="tabpanel" aria-labelledby="hp-benefits-tab">
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>Access to primary care consultations in MediCard-accredited clinics.</li>
+                  <li>Use for selected laboratory and diagnostic tests, depending on card value and rules.</li>
+                  <li>Ideal for routine check-ups and minor illnesses that do not need hospitalization.</li>
+                  <li>Simple, prepaid structure – no long-term HMO membership requirements.</li>
+                </ul>
+                <p class="small text-muted">
+                  Specific inclusions and usage rules follow MediCard’s official Health Plus card guide.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="hp-exclusions" role="tabpanel" aria-labelledby="hp-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <ul>
+                  <li>Expenses beyond the prepaid card’s value or outside covered services.</li>
+                  <li>Inpatient confinement and major procedures not specified as covered.</li>
+                  <li>Cosmetic and non-medically necessary treatments.</li>
+                  <li>Other exclusions and limitations stated in the Health Plus product terms.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RxER MODAL -->
+    <div class="modal fade" id="rxerModal" tabindex="-1" aria-labelledby="rxerLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="rxerLabel">RxER</h5>
+              <small class="text-muted">Specialized plan for selected ER cases, preventive care and unlimited consultations.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱2,378.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="rxerTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="rxer-desc-tab" data-bs-toggle="tab" data-bs-target="#rxer-desc" type="button" role="tab" aria-controls="rxer-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="rxer-benefits-tab" data-bs-toggle="tab" data-bs-target="#rxer-benefits" type="button" role="tab" aria-controls="rxer-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="rxer-exclusions-tab" data-bs-toggle="tab" data-bs-target="#rxer-exclusions" type="button" role="tab" aria-controls="rxer-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="rxerTabsContent">
+              <div class="tab-pane fade show active" id="rxer-desc" role="tabpanel" aria-labelledby="rxer-desc-tab">
+                <p>
+                  RxER is a specialized MediCard program that focuses on emergency care for selected ER cases,
+                  preventive services such as annual physical exams, and unlimited clinic consultations in
+                  MediCard free-standing clinics.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="rxer-benefits" role="tabpanel" aria-labelledby="rxer-benefits-tab">
+                <h6>Key Benefits (Summary)</h6>
+                <ul>
+                  <li>Emergency care coverage for trauma, burns, animal bites and accidental chemical poisoning up to a defined ER limit.</li>
+                  <li>Coverage for ER doctor’s fees, emergency medicines, basic labs and selected complex diagnostics within limits.</li>
+                  <li>Annual Physical Exam package (CBC, urinalysis, fecalysis, chest X-ray, general check-up) at MediCard free-standing clinics.</li>
+                  <li>Unlimited outpatient consultations with primary care doctors and some specialists in MediCard free-standing clinics.</li>
+                  <li>Discounts on additional diagnostic tests, procedures and dental work in participating clinics.</li>
+                </ul>
+              </div>
+
+              <div class="tab-pane fade" id="rxer-exclusions" role="tabpanel" aria-labelledby="rxer-exclusions-tab">
+                <h6>Key Exclusions (Summary)</h6>
+                <ul>
+                  <li>Inpatient confinement is not covered under RxER (emergency care is outpatient-based).</li>
+                  <li>Services beyond indicated ER limits or outside covered cases are not payable.</li>
+                  <li>Non-covered outpatient services, medicines after discharge and non-emergency cases.</li>
+                  <li>Care outside the Philippines and services not specified in the RxER benefits list.</li>
+                  <li>Other exclusions and service limitations set in the official RxER policy.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MY MEDICARD MODAL -->
+    <div class="modal fade" id="myMedicardModal" tabindex="-1" aria-labelledby="myMedicardLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="myMedicardLabel">My MediCard</h5>
+              <small class="text-muted">Flexible, card-based program for outpatient and basic care.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱3,600.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="mmTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="mm-desc-tab" data-bs-toggle="tab" data-bs-target="#mm-desc" type="button" role="tab" aria-controls="mm-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mm-benefits-tab" data-bs-toggle="tab" data-bs-target="#mm-benefits" type="button" role="tab" aria-controls="mm-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mm-exclusions-tab" data-bs-toggle="tab" data-bs-target="#mm-exclusions" type="button" role="tab" aria-controls="mm-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="mmTabsContent">
+              <div class="tab-pane fade show active" id="mm-desc" role="tabpanel" aria-labelledby="mm-desc-tab">
+                <p>
+                  My MediCard is a card-based program that usually provides outpatient and basic medical
+                  services at MediCard providers. It is aimed at individuals who want an easy-to-use,
+                  reloadable-style coverage option.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="mm-benefits" role="tabpanel" aria-labelledby="mm-benefits-tab">
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>Consultations with MediCard-accredited doctors, subject to card balance and rules.</li>
+                  <li>Access to selected laboratory and diagnostic procedures.</li>
+                  <li>Availability in MediCard clinics and partner facilities listed for the program.</li>
+                  <li>Simple, card-based usage – member presents the card when availing services.</li>
+                </ul>
+                <p class="small text-muted">
+                  For complete list of inclusions and provider sites, refer to My MediCard’s detailed product sheet.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="mm-exclusions" role="tabpanel" aria-labelledby="mm-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <ul>
+                  <li>Inpatient confinement and major procedures beyond the card’s scope.</li>
+                  <li>Services not listed as covered or beyond card limits.</li>
+                  <li>Purely cosmetic, non-medically necessary, or unapproved treatments.</li>
+                  <li>Other exclusions stated in the My MediCard terms and conditions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDICARD SELECT MODAL -->
+    <div class="modal fade" id="medicardSelectModal" tabindex="-1" aria-labelledby="medicardSelectLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-between">
+            <div>
+              <h5 class="modal-title" id="medicardSelectLabel">MediCard Select</h5>
+              <small class="text-muted">High-limit HMO plan with curated provider access.</small>
+            </div>
+            <span class="fw-bold text-primary fs-5">₱30,000.00</span>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs mb-3" id="msTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ms-desc-tab" data-bs-toggle="tab" data-bs-target="#ms-desc" type="button" role="tab" aria-controls="ms-desc" aria-selected="true">
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ms-benefits-tab" data-bs-toggle="tab" data-bs-target="#ms-benefits" type="button" role="tab" aria-controls="ms-benefits" aria-selected="false">
+                  Benefits
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ms-exclusions-tab" data-bs-toggle="tab" data-bs-target="#ms-exclusions" type="button" role="tab" aria-controls="ms-exclusions" aria-selected="false">
+                  Exclusions
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="msTabsContent">
+              <div class="tab-pane fade show active" id="ms-desc" role="tabpanel" aria-labelledby="ms-desc-tab">
+                <p>
+                  MediCard Select is a higher-value HMO program with generous coverage for inpatient,
+                  outpatient and preventive care, typically offered with a curated network and defined
+                  benefit limits.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="ms-benefits" role="tabpanel" aria-labelledby="ms-benefits-tab">
+                <h6>Key Benefits</h6>
+                <ul>
+                  <li>Enhanced hospital confinement limits and higher room categories in selected facilities.</li>
+                  <li>Outpatient consultations and diagnostics across an approved network of providers.</li>
+                  <li>Preventive services such as annual exams and routine screenings, where specified.</li>
+                  <li>Coverage for a wide range of medically necessary procedures, within plan ceilings.</li>
+                </ul>
+                <p class="small text-muted">
+                  Full details are available in MediCard’s official MediCard Select plan documentation.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="ms-exclusions" role="tabpanel" aria-labelledby="ms-exclusions-tab">
+                <h6>General Exclusions (Summary)</h6>
+                <ul>
+                  <li>Non-medically necessary or cosmetic procedures and services.</li>
+                  <li>Conditions, treatments or providers outside the plan’s defined coverage.</li>
+                  <li>Unapproved services or those beyond the set limits and sub-limits.</li>
+                  <li>Other exclusions and limitations listed in the MediCard Select policy.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+    <div class="container d-flex justify-content-between align-items-center small">
+      <span>&copy; 2025 Health Connect</span>
+      <span>Insurance • Home Health Care • Diagnostics</span>
+    </div>
+  </footer>
+
+  <!-- ===== Bootstrap JS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

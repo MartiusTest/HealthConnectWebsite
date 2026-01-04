@@ -1,0 +1,33 @@
+STATIC HTML CONVERSION RULES (PURE HTML)
+
+A) REMOVE ASP.NET / WEBFORMS ARTIFACTS
+1) Remove: <form ... id="aspnetForm"> wrapper and any __VIEWSTATE / __EVENTTARGET / __EVENTARGUMENT hidden inputs.
+2) Remove: WebResource.axd, ScriptResource.axd, Sys.WebForms.PageRequestManager blocks, __doPostBack, and any ASP.NET Ajax init scripts.
+3) Keep only normal HTML markup and client-side assets you actually ship (e.g., Bootstrap CDN, your /content/Site.css).
+
+B) LINK CONVERSIONS (ASPX -> HTML)
+1) Convert every internal link ending in .aspx to .html (keep the same path/filename unless a specific mapping is defined below).
+   Examples:
+   /About.aspx -> /about.html
+   ../SomePage.aspx -> ../SomePage.html
+2) Special mapped pages (always lowercase filename):
+   ../../InsuranceQuotes.aspx?... -> ../../insurancequotes.html?...
+   ../../Scheduling.aspx?...      -> ../../scheduling.html?...
+   ../../ViewPDF.aspx?file=...    -> ../../viewpdf.html?file=pdf/<lowercase-folder>/<original-file>
+3) ViewPDF file parameter rule:
+   - Always force the folder after pdf/ to lowercase.
+   - Keep the actual PDF filename casing as-is.
+   Example:
+   ../../ViewPDF.aspx?file=OONA/OONA_Travel.pdf
+   -> ../../viewpdf.html?file=pdf/oona/OONA_Travel.pdf
+
+C) FOLDER NAMES MUST ALWAYS BE LOWERCASE (PATH NORMALIZATION)
+1) Convert these folder segments to lowercase wherever they appear in src/href:
+   /Images/...  -> /images/...
+   /Content/... -> /content/...
+   (and any other folder segment in a URL path should be lowercased if it refers to a folder)
+2) Do NOT change the filename casing unless explicitly requested. (e.g., logo.png stays logo.png)
+3) CSS file /content/Site.css
+
+D) NAVBAR HOME LINK
+- Convert /Default.aspx to /index.html (or your chosen static homepage filename if you have one; default is /index.html).
