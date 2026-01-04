@@ -15,6 +15,13 @@ function log_quote_error(
     $email,
     $phone,
     $provider,
+    $insuredPerson,
+    $birthdate,
+    $age,
+    $roomCategory,
+    $hospitalLimit,
+    $dental,
+    $personalAccident,
     $plan,
     $message
 ) {
@@ -36,6 +43,13 @@ function log_quote_error(
 
         $sb .= "=== Insurance Details ===\n";
         $sb .= "Provider  : " . $provider . "\n";
+        $sb .= "Insured   : " . $insuredPerson . "\n";
+        $sb .= "Birthdate : " . $birthdate . "\n";
+        $sb .= "Age       : " . $age . "\n";
+        $sb .= "Room Cat  : " . $roomCategory . "\n";
+        $sb .= "Hosp Limit: " . $hospitalLimit . "\n";
+        $sb .= "Dental    : " . $dental . "\n";
+        $sb .= "Accident  : " . $personalAccident . "\n";
         $sb .= "Plan      : " . $plan . "\n";
         $sb .= "Message   : " . (trim($message) === '' ? '(none)' : $message) . "\n\n";
 
@@ -54,28 +68,45 @@ function log_quote_error(
 $fullName = isset($_POST['full_name']) ? trim($_POST['full_name']) : '';
 $email    = isset($_POST['email']) ? trim($_POST['email']) : '';
 $phone    = isset($_POST['phone']) ? trim($_POST['phone']) : '';
-$provider = isset($_POST['provider']) ? trim($_POST['provider']) : '';
+$provider = isset($_POST['provider']) ? $_POST['provider'] : '';
+$insuredPerson = isset($_POST['insured_person']) ? trim($_POST['insured_person']) : '';
+$birthdate = isset($_POST['birthdate']) ? trim($_POST['birthdate']) : '';
+$age = isset($_POST['age']) ? trim($_POST['age']) : '';
+$roomCategory = isset($_POST['room_category']) ? trim($_POST['room_category']) : '';
+$hospitalLimit = isset($_POST['hospital_limit']) ? trim($_POST['hospital_limit']) : '';
+$dental = isset($_POST['dental']) ? trim($_POST['dental']) : 'No';
+$personalAccident = isset($_POST['personal_accident']) ? trim($_POST['personal_accident']) : 'No';
 $plan     = isset($_POST['plan']) ? trim($_POST['plan']) : '';
 $message  = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-if ($fullName === '' || $email === '' || $provider === '') {
+$providerValues = [];
+if (is_array($provider)) {
+    $providerValues = array_filter(array_map('trim', $provider), 'strlen');
+} elseif (is_string($provider) && trim($provider) !== '') {
+    $providerValues = [trim($provider)];
+}
+
+if ($fullName === '' || $email === '' || $providerValues === []) {
     // Required fields missing
     header('Location: thankyou_quote_failed.html');
     exit;
 }
 
 // Map internal text for provider if needed
-$providerText = $provider;
-switch ($provider) {
-    case 'PacificCross': $providerText = 'Pacific Cross'; break;
-    case 'OONA':         $providerText = 'OONA'; break;
-    case 'PhilCare':     $providerText = 'PhilCare'; break;
-    case 'Medicare':     $providerText = 'Medicare'; break;
-    case 'Alpha':        $providerText = 'Alpha Insurance'; break;
-    case 'Kaiser':       $providerText = 'Kaiser'; break;
-    case 'Other':        $providerText = 'Other / Not Sure'; break;
-    default:             $providerText = $provider; break;
+$providerMap = [
+    'PacificCross' => 'Pacific Cross',
+    'OONA' => 'OONA',
+    'PhilCare' => 'PhilCare',
+    'Medicare' => 'Medicare',
+    'Alpha' => 'Alpha Insurance',
+    'Kaiser' => 'Kaiser',
+    'Other' => 'Other / Not Sure'
+];
+$providerTextValues = [];
+foreach ($providerValues as $providerValue) {
+    $providerTextValues[] = $providerMap[$providerValue] ?? $providerValue;
 }
+$providerText = implode(', ', $providerTextValues);
 
 try {
     // ========== INTERNAL EMAIL ==========
@@ -87,6 +118,13 @@ try {
 
     $body .= "=== Insurance Details ===\n";
     $body .= "Provider: " . $providerText . "\n";
+    $body .= "Person to be Insured: " . ($insuredPerson === '' ? '(not specified)' : $insuredPerson) . "\n";
+    $body .= "Birthdate: " . ($birthdate === '' ? '(not specified)' : $birthdate) . "\n";
+    $body .= "Age: " . ($age === '' ? '(not specified)' : $age) . "\n";
+    $body .= "Hospital Room Category: " . ($roomCategory === '' ? '(not specified)' : $roomCategory) . "\n";
+    $body .= "Hospital Limit: " . ($hospitalLimit === '' ? '(not specified)' : $hospitalLimit) . "\n";
+    $body .= "Dental: " . $dental . "\n";
+    $body .= "Personal Accident: " . $personalAccident . "\n";
     $body .= "Plan: "     . ($plan === '' ? '(none specified)' : $plan) . "\n\n";
 
     $body .= "Message:\n";
@@ -141,6 +179,13 @@ try {
             $safeProvText = htmlspecialchars($providerText, ENT_QUOTES, 'UTF-8');
             $safePlan     = htmlspecialchars($plan, ENT_QUOTES, 'UTF-8');
             $safePhone    = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
+            $safeInsured  = htmlspecialchars($insuredPerson, ENT_QUOTES, 'UTF-8');
+            $safeBirthdate = htmlspecialchars($birthdate, ENT_QUOTES, 'UTF-8');
+            $safeAge      = htmlspecialchars($age, ENT_QUOTES, 'UTF-8');
+            $safeRoom     = htmlspecialchars($roomCategory, ENT_QUOTES, 'UTF-8');
+            $safeLimit    = htmlspecialchars($hospitalLimit, ENT_QUOTES, 'UTF-8');
+            $safeDental   = htmlspecialchars($dental, ENT_QUOTES, 'UTF-8');
+            $safeAccident = htmlspecialchars($personalAccident, ENT_QUOTES, 'UTF-8');
             $safeMessage  = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
             $html  = "<!DOCTYPE html><html><head><meta charset='utf-8' />";
@@ -152,6 +197,23 @@ try {
             $html .= "<h3 style='font-size:16px;margin-top:20px;'>Summary of your request</h3>";
             $html .= "<ul>";
             $html .= "<li><strong>Provider:</strong> {$safeProvText}</li>";
+            if ($insuredPerson !== '') {
+                $html .= "<li><strong>Person to be insured:</strong> {$safeInsured}</li>";
+            }
+            if ($birthdate !== '') {
+                $html .= "<li><strong>Birthdate:</strong> {$safeBirthdate}</li>";
+            }
+            if ($age !== '') {
+                $html .= "<li><strong>Age:</strong> {$safeAge}</li>";
+            }
+            if ($roomCategory !== '') {
+                $html .= "<li><strong>Hospital room category:</strong> {$safeRoom}</li>";
+            }
+            if ($hospitalLimit !== '') {
+                $html .= "<li><strong>Hospital limit:</strong> {$safeLimit}</li>";
+            }
+            $html .= "<li><strong>Dental:</strong> {$safeDental}</li>";
+            $html .= "<li><strong>Personal accident:</strong> {$safeAccident}</li>";
             if ($plan !== '') {
                 $html .= "<li><strong>Plan:</strong> {$safePlan}</li>";
             }
@@ -180,6 +242,13 @@ try {
                 $email,
                 $phone,
                 $providerText,
+                $insuredPerson,
+                $birthdate,
+                $age,
+                $roomCategory,
+                $hospitalLimit,
+                $dental,
+                $personalAccident,
                 $plan,
                 $message
             );
@@ -197,6 +266,13 @@ try {
         $email,
         $phone,
         $providerText,
+        $insuredPerson,
+        $birthdate,
+        $age,
+        $roomCategory,
+        $hospitalLimit,
+        $dental,
+        $personalAccident,
         $plan,
         $message
     );
