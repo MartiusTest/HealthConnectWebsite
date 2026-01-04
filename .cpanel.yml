@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/primoris/public_html/repositories/HealthConnectWebsite
+    - /bin/cp -R * $DEPLOYPATH
