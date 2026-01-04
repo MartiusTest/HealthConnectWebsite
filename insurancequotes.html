@@ -65,7 +65,7 @@
                                 </label>
                                 <input type="text" id="full_name" name="full_name"
                                        class="form-control"
-                                       placeholder="Juan Dela Cruz" required />
+                                       required />
                                 <div class="invalid-feedback">
                                     Please enter your full name.
                                 </div>
@@ -77,7 +77,7 @@
                                 </label>
                                 <input type="email" id="email" name="email"
                                        class="form-control"
-                                       placeholder="you@example.com" required />
+                                       required />
                                 <div class="invalid-feedback">
                                     Please enter a valid email address.
                                 </div>
@@ -104,21 +104,103 @@
                                 <label for="provider" class="form-label">
                                     Insurance Provider <span class="text-danger">*</span>
                                 </label>
-                                <select id="provider" name="provider" class="form-select" required>
-                                    <option value="">-- Select Provider --</option>
-                                    <option value="PacificCross">Pacific Cross</option>
-                                    <option value="OONA">OONA</option>
-                                    <option value="PhilCare">PhilCare</option>
-                                    <option value="Medicare">Medicare</option>
-                                    <option value="Alpha">Alpha Insurance</option>
-                                    <option value="Kaiser">Kaiser</option>
-                                    <option value="Other">Other / Not Sure</option>
-                                </select>
+                                <div id="provider" class="d-flex flex-column gap-2" role="group" aria-label="Insurance Providers">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_pacific" name="provider[]" value="PacificCross" required />
+                                        <label class="form-check-label" for="provider_pacific">Pacific Cross</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_oona" name="provider[]" value="OONA" />
+                                        <label class="form-check-label" for="provider_oona">OONAx</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_philcare" name="provider[]" value="PhilCare" />
+                                        <label class="form-check-label" for="provider_philcare">PhilCare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_medicare" name="provider[]" value="Medicare" />
+                                        <label class="form-check-label" for="provider_medicare">Medicare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_alpha" name="provider[]" value="Alpha" />
+                                        <label class="form-check-label" for="provider_alpha">Alpha Insurance</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_kaiser" name="provider[]" value="Kaiser" />
+                                        <label class="form-check-label" for="provider_kaiser">Kaiser</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_other" name="provider[]" value="Other" />
+                                        <label class="form-check-label" for="provider_other">Other / Not Sure</label>
+                                    </div>
+                                </div>
                                 <div class="invalid-feedback">
                                     Please select an insurance provider.
                                 </div>
-                                <div class="form-text">
-                                    If you clicked from a specific provider page, this may already be selected.
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="insured_person" class="form-label">
+                                    Person to be Insured
+                                </label>
+                                <input type="text" id="insured_person" name="insured_person"
+                                       class="form-control"
+                                       placeholder="e.g., Self, Spouse, Child" />
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="birthdate" class="form-label">
+                                        Birthdate
+                                    </label>
+                                    <input type="date" id="birthdate" name="birthdate" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="age" class="form-label">
+                                        Age
+                                    </label>
+                                    <input type="number" id="age" name="age" class="form-control" min="0" readonly />
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="room_category" class="form-label">
+                                    Hospital Room Category
+                                </label>
+                                <select id="room_category" name="room_category" class="form-select">
+                                    <option value="">-- Select Category --</option>
+                                    <option value="Ward">Ward</option>
+                                    <option value="SemiPrivate">Semi Private</option>
+                                    <option value="Private">Private</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="hospital_limit" class="form-label">
+                                    Hospital Limit
+                                </label>
+                                <select id="hospital_limit" name="hospital_limit" class="form-select">
+                                    <option value="">-- Select Limit --</option>
+                                    <option value="100000-300000">100,000.00 - 300,000.00</option>
+                                    <option value="300001-500000">300,001.00 - 500,000.00</option>
+                                    <option value="500001-750000">500,001.00 - 750,000.00</option>
+                                    <option value="750001-1000000000">750,001.00 – 1,000,000,000.00</option>
+                                    <option value="1000000001-up">1,000,000,001.00 - Up</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dental" name="dental" value="Yes" />
+                                    <label class="form-check-label" for="dental">
+                                        Dental
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="personal_accident" name="personal_accident" value="Yes" />
+                                    <label class="form-check-label" for="personal_accident">
+                                        Personal Accident
+                                    </label>
                                 </div>
                             </div>
 
@@ -136,7 +218,7 @@
 
                             <div class="mb-3">
                                 <label for="message" class="form-label">
-                                    Additional Information (optional)
+                                    Remarks:
                                 </label>
                                 <textarea id="message" name="message"
                                           class="form-control"
@@ -203,6 +285,53 @@
         (function () {
             var form = document.getElementById('quoteForm');
             if (!form) return;
+            var birthdateInput = document.getElementById('birthdate');
+            var ageInput = document.getElementById('age');
+            var providerCheckboxes = form.querySelectorAll('input[name="provider[]"]');
+
+            function updateAge() {
+                if (!birthdateInput || !ageInput || !birthdateInput.value) {
+                    if (ageInput) {
+                        ageInput.value = '';
+                    }
+                    return;
+                }
+
+                var birthDate = new Date(birthdateInput.value);
+                if (Number.isNaN(birthDate.getTime())) {
+                    ageInput.value = '';
+                    return;
+                }
+
+                var today = new Date();
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var monthDiff = today.getMonth() - birthDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                ageInput.value = age >= 0 ? age : '';
+            }
+
+            function syncProviderValidation() {
+                if (!providerCheckboxes.length) return;
+                var anyChecked = Array.prototype.some.call(providerCheckboxes, function (checkbox) {
+                    return checkbox.checked;
+                });
+                providerCheckboxes.forEach(function (checkbox) {
+                    checkbox.required = !anyChecked;
+                });
+            }
+
+            if (birthdateInput) {
+                birthdateInput.addEventListener('change', updateAge);
+                birthdateInput.addEventListener('input', updateAge);
+            }
+            if (providerCheckboxes.length) {
+                providerCheckboxes.forEach(function (checkbox) {
+                    checkbox.addEventListener('change', syncProviderValidation);
+                });
+                syncProviderValidation();
+            }
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
                     event.preventDefault();
