@@ -104,8 +104,7 @@
                                 <label for="provider" class="form-label">
                                     Insurance Provider <span class="text-danger">*</span>
                                 </label>
-                                <select id="provider" name="provider" class="form-select" required>
-                                    <option value="">-- Select Provider --</option>
+                                <select id="provider" name="provider[]" class="form-select" multiple required>
                                     <option value="PacificCross">Pacific Cross</option>
                                     <option value="OONA">OONA</option>
                                     <option value="PhilCare">PhilCare</option>
@@ -118,7 +117,72 @@
                                     Please select an insurance provider.
                                 </div>
                                 <div class="form-text">
-                                    If you clicked from a specific provider page, this may already be selected.
+                                    Hold Ctrl (Windows) or Command (Mac) to select multiple providers.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="insured_person" class="form-label">
+                                    Person to be Insured
+                                </label>
+                                <input type="text" id="insured_person" name="insured_person"
+                                       class="form-control"
+                                       placeholder="e.g., Self, Spouse, Child" />
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="birthdate" class="form-label">
+                                        Birthdate
+                                    </label>
+                                    <input type="date" id="birthdate" name="birthdate" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="age" class="form-label">
+                                        Age
+                                    </label>
+                                    <input type="number" id="age" name="age" class="form-control" min="0" />
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="room_category" class="form-label">
+                                    Hospital Room Category
+                                </label>
+                                <select id="room_category" name="room_category" class="form-select">
+                                    <option value="">-- Select Category --</option>
+                                    <option value="Ward">Ward</option>
+                                    <option value="SemiPrivate">Semi Private</option>
+                                    <option value="Private">Private</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="hospital_limit" class="form-label">
+                                    Hospital Limit
+                                </label>
+                                <select id="hospital_limit" name="hospital_limit" class="form-select">
+                                    <option value="">-- Select Limit --</option>
+                                    <option value="100000-300000">100,000.00 - 300,000.00</option>
+                                    <option value="300001-500000">300,001.00 - 500,000.00</option>
+                                    <option value="500001-750000">500,001.00 - 750,000.00</option>
+                                    <option value="750001-1000000000">750,001.00 – 1,000,000,000.00</option>
+                                    <option value="1000000001-up">1,000,000,001.00 - Up</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dental" name="dental" value="Yes" />
+                                    <label class="form-check-label" for="dental">
+                                        Dental
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="personal_accident" name="personal_accident" value="Yes" />
+                                    <label class="form-check-label" for="personal_accident">
+                                        Personal Accident
+                                    </label>
                                 </div>
                             </div>
 
@@ -136,7 +200,7 @@
 
                             <div class="mb-3">
                                 <label for="message" class="form-label">
-                                    Additional Information (optional)
+                                    Remarks
                                 </label>
                                 <textarea id="message" name="message"
                                           class="form-control"
