@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===== Global SEO Defaults ===== -->
+    <title>Travel Insurance Quote Request</title>
+    <meta name="description" content="Request a travel insurance quote through Health Connect for your upcoming trip." />
+    <meta name="keywords" content="health connect, travel insurance quote, philippine travel insurance, pacific cross, oona, philcare, medicare, kaiser, alpha insurance" />
+    <meta name="author" content="Health Connect Philippines" />
+
+    <!-- ===== Bootstrap & Icons ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Health Connect CSS (lowercase path) -->
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+                <img src="/images/logo.png" alt="Health Connect Logo" height="40" class="me-2" />
+                Health Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navHC" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main class="container py-4">
+        <h2 class="text-primary mb-3">Travel Insurance Quote Request</h2>
+        <p class="text-muted mb-4">
+            Tell us a bit about yourself and your trip details.
+            Health Connect will forward your request to the appropriate insurance provider
+            so they can contact you with plan options and pricing.
+        </p>
+
+        <div class="row g-4">
+            <!-- FORM COLUMN -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- We’ll show any client-side validation normally using Bootstrap -->
+                        <form id="quoteForm" class="needs-validation" novalidate method="post" action="insurancequotes.php">
+                            <input type="hidden" name="insurance_type" value="Travel" />
+                            <!-- Personal Info -->
+                            <h5 class="mt-2 mb-3">Your Information</h5>
+
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="full_name" name="full_name"
+                                       class="form-control"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Please enter your full name.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" id="email" name="email"
+                                       class="form-control"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Mobile Number
+                                </label>
+                                <input type="text" id="phone" name="phone"
+                                       class="form-control"
+                                       placeholder="+63 9XX XXX XXXX" />
+                                <div class="invalid-feedback">
+                                    Please enter a valid mobile number.
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <!-- Insurance Details -->
+                            <h5 class="mb-3">Insurance Details</h5>
+
+                            <div class="mb-3">
+                                <label for="provider" class="form-label">
+                                    Insurance Provider <span class="text-danger">*</span>
+                                </label>
+                                <div id="provider" class="d-flex flex-column gap-2" role="group" aria-label="Insurance Providers">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_pacific" name="provider[]" value="PacificCross" required />
+                                        <label class="form-check-label" for="provider_pacific">Pacific Cross</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_oona" name="provider[]" value="OONA" />
+                                        <label class="form-check-label" for="provider_oona">OONA</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_philcare" name="provider[]" value="PhilCare" />
+                                        <label class="form-check-label" for="provider_philcare">PhilCare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_medicare" name="provider[]" value="Medicare" />
+                                        <label class="form-check-label" for="provider_medicare">Medicare</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_alpha" name="provider[]" value="Alpha" />
+                                        <label class="form-check-label" for="provider_alpha">Alpha Insurance</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_kaiser" name="provider[]" value="Kaiser" />
+                                        <label class="form-check-label" for="provider_kaiser">Kaiser</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="provider_other" name="provider[]" value="Other" />
+                                        <label class="form-check-label" for="provider_other">Other / Not Sure</label>
+                                    </div>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please select an insurance provider.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="insured_person" class="form-label">
+                                    Person to be Insured
+                                </label>
+                                <input type="text" id="insured_person" name="insured_person"
+                                       class="form-control"
+                                       placeholder="e.g., Self, Spouse, Child" />
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="birthdate" class="form-label">
+                                        Birthdate
+                                    </label>
+                                    <input type="date" id="birthdate" name="birthdate" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="age" class="form-label">
+                                        Age
+                                    </label>
+                                    <input type="number" id="age" name="age" class="form-control" min="0" readonly />
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="plan" class="form-label">
+                                    Plan Name (optional)
+                                </label>
+                                <input type="text" id="plan" name="plan"
+                                       class="form-control"
+                                       placeholder="e.g., Blue Royal, Select ER, International Travel" />
+                                <div class="form-text">
+                                    If you are not sure, you may leave this blank.
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <h5 class="mb-3">Travel Details</h5>
+
+                            <div class="mb-3">
+                                <label for="flight_itinerary" class="form-label">
+                                    Flight Itinerary Schedule <span class="text-danger">*</span>
+                                </label>
+                                <textarea id="flight_itinerary" name="flight_itinerary"
+                                          class="form-control"
+                                          rows="3"
+                                          placeholder="List flight numbers, routes, and layovers"
+                                          required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide your flight itinerary schedule.
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="departure_date" class="form-label">
+                                        Departure Date <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="date" id="departure_date" name="departure_date" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        Please select your departure date.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="arrival_date" class="form-label">
+                                        Arrival Date <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="date" id="arrival_date" name="arrival_date" class="form-control" required />
+                                    <div class="invalid-feedback">
+                                        Please select your arrival date.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="total_days" class="form-label">
+                                    Total Number of Days <span class="text-danger">*</span>
+                                </label>
+                                <input type="number" id="total_days" name="total_days"
+                                       class="form-control"
+                                       min="1"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Please enter the total number of travel days.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    Remarks:
+                                </label>
+                                <textarea id="message" name="message"
+                                          class="form-control"
+                                          rows="4"
+                                          placeholder="Tell us about your requirements (e.g., number of travelers, destination, budget, coverage preferences)"></textarea>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit Quote Request
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary">
+                                    Clear Form
+                                </button>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                By submitting this form, you agree that Health Connect may share your information
+                                with partner insurance providers for the purpose of preparing your quotation or
+                                contacting you about your inquiry.
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDE INFO COLUMN -->
+            <div class="col-lg-4">
+                <div class="card border-0 bg-light h-100">
+                    <div class="card-body">
+                        <h5 class="mb-3">What happens next?</h5>
+                        <ul class="small text-muted mb-3">
+                            <li>Your request will be sent securely to Health Connect.</li>
+                            <li>We will route your inquiry to the appropriate insurance provider.</li>
+                            <li>A representative may contact you by email or phone for follow-up questions.</li>
+                            <li>You’ll receive plan options, pricing, and next steps for enrollment.</li>
+                        </ul>
+
+                        <h6 class="mb-2">Tips for faster processing</h6>
+                        <ul class="small text-muted">
+                            <li>Provide an active email and mobile number.</li>
+                            <li>Include age, number of travelers, destination, and preferred coverage (in the message box).</li>
+                            <li>Indicate if the plan is for individual, family, group, or company use.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <span>&copy; 2025 Health Connect</span>
+            <span>Insurance • Home Health Care • Diagnostics</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + simple validation -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById('quoteForm');
+            if (!form) return;
+            var birthdateInput = document.getElementById('birthdate');
+            var ageInput = document.getElementById('age');
+            var providerCheckboxes = form.querySelectorAll('input[name="provider[]"]');
+
+            function updateAge() {
+                if (!birthdateInput || !ageInput || !birthdateInput.value) {
+                    if (ageInput) {
+                        ageInput.value = '';
+                    }
+                    return;
+                }
+
+                var birthDate = new Date(birthdateInput.value);
+                if (Number.isNaN(birthDate.getTime())) {
+                    ageInput.value = '';
+                    return;
+                }
+
+                var today = new Date();
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var monthDiff = today.getMonth() - birthDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                ageInput.value = age >= 0 ? age : '';
+            }
+
+            function syncProviderValidation() {
+                if (!providerCheckboxes.length) return;
+                var anyChecked = Array.prototype.some.call(providerCheckboxes, function (checkbox) {
+                    return checkbox.checked;
+                });
+                providerCheckboxes.forEach(function (checkbox) {
+                    checkbox.required = !anyChecked;
+                });
+            }
+
+            if (birthdateInput) {
+                birthdateInput.addEventListener('change', updateAge);
+                birthdateInput.addEventListener('input', updateAge);
+            }
+            if (providerCheckboxes.length) {
+                providerCheckboxes.forEach(function (checkbox) {
+                    checkbox.addEventListener('change', syncProviderValidation);
+                });
+                syncProviderValidation();
+            }
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+</html>
