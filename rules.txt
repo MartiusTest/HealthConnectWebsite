@@ -9,7 +9,7 @@ B) LINK CONVERSIONS (ASPX -> HTML)
 1) Convert every internal link ending in .aspx to .html (keep the same path/filename unless a specific mapping is defined below).
    Examples:
    /About.aspx -> /about.html
-   ../SomePage.aspx -> ../SomePage.html
+   ../SomePage.aspx -> ../somePage.html
 2) Special mapped pages (always lowercase filename):
    ../../InsuranceQuotes.aspx?... -> ../../insurancequotes.html?...
    ../../Scheduling.aspx?...      -> ../../scheduling.html?...
