@@ -52,15 +52,21 @@
                 <div class="card shadow-sm">
                     <div class="card-body">
 
-                        <form method="post" action="sendmail.php" novalidate>
+                        <form id="contactForm" class="needs-validation" method="post" action="sendmail.php" novalidate>
                             <div class="mb-3">
                                 <label for="txtName" class="form-label">Full Name <span class="text-danger">*</span></label>
                                 <input name="txtName" id="txtName" type="text" class="form-control" placeholder="Juan Dela Cruz" required />
+                                <div class="invalid-feedback">
+                                    Please enter your full name.
+                                </div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
                                 <input name="txtEmail" id="txtEmail" type="email" class="form-control" placeholder="you@example.com" required />
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
                             </div>
 
                             <div class="mb-3">
@@ -71,6 +77,9 @@
                             <div class="mb-3">
                                 <label for="txtMessage" class="form-label">Message <span class="text-danger">*</span></label>
                                 <textarea name="txtMessage" id="txtMessage" rows="5" class="form-control" placeholder="How can we help you?" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please share how we can help you.
+                                </div>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-hc-action">
@@ -140,6 +149,19 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById('contactForm');
+            if (!form) return;
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
 </body>
 
 </html>
