@@ -139,11 +139,11 @@ a {
 
 /* Provider logos */
 .provider-logo {
-    width: 120px; /* Standard width */
-    height: 60px; /* Standard height */
+    width: 180px; /* Larger display size */
+    height: 90px; /* Larger display size */
     object-fit: contain; /* Keeps aspect ratio */
     object-position: center;
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
     display: block;
 }
 
