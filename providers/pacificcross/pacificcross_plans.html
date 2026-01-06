@@ -194,8 +194,7 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.js"
-          integrity="sha512-14EH0kMX0gVGIEh2/XHT+MUAEYfcaZNLlItNlJp2dTTv9pS7lo74aEd1q56qrso8FwAkfeWf8hWNWYqoFjXWmg=="
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
           crossorigin="anonymous"></script>
   <script>
     const blueRoyalPreview = document.getElementById("blue-royal-preview");
@@ -203,7 +202,7 @@
 
     if (blueRoyalPreview && window.pdfjsLib) {
       window.pdfjsLib.GlobalWorkerOptions.workerSrc =
-        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.worker.min.js";
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
       window.pdfjsLib.getDocument(blueRoyalPdfUrl).promise
         .then((pdf) => pdf.getPage(1))
