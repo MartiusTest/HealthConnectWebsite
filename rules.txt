@@ -13,13 +13,13 @@ B) LINK CONVERSIONS (ASPX -> HTML)
 2) Special mapped pages (always lowercase filename):
    ../../InsuranceQuotes.aspx?... -> ../../insurancequotes.html?...
    ../../Scheduling.aspx?...      -> ../../scheduling.html?...
-   ../../ViewPDF.aspx?file=...    -> ../../viewpdf.html?file=pdf/<lowercase-folder>/<original-file>
+   ../../ViewPDF.aspx?file=...    -> ../../viewpdf.html?file=pdf/brochures/<lowercase-folder>/<original-file>
 3) ViewPDF file parameter rule:
-   - Always force the folder after pdf/ to lowercase.
+   - Always force the folder after pdf/brochures/ to lowercase.
    - Keep the actual PDF filename casing as-is.
    Example:
    ../../ViewPDF.aspx?file=OONA/OONA_Travel.pdf
-   -> ../../viewpdf.html?file=pdf/oona/OONA_Travel.pdf
+   -> ../../viewpdf.html?file=pdf/brochures/oona/OONA_Travel.pdf
 
 C) FOLDER NAMES MUST ALWAYS BE LOWERCASE (PATH NORMALIZATION)
 1) Convert these folder segments to lowercase wherever they appear in src/href:
