@@ -55,6 +55,11 @@
                         <div class="mt-auto">
                             <a href="../../viewpdf.html?file=pdf/brochures/pacificcross/Healthline.pdf"
                                class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action">View Brochure</a>
+                            <button class="btn btn-outline-primary btn-sm w-100 mb-2 btn-hc-action"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#healthlineBenefitsModal">
+                                Benefits
+                            </button>
 
                             <a href="/insurancequotes.html?provider=PacificCross&amp;plan=Healthline"
                                class="btn btn-primary btn-sm w-100 mb-2 btn-hc-action">Get Quote</a>
@@ -75,6 +80,30 @@
         </div>
 
     </main>
+
+    <!-- ================= BENEFITS MODALS ================= -->
+    <div class="modal fade" id="healthlineBenefitsModal" tabindex="-1" aria-labelledby="healthlineBenefitsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="healthlineBenefitsLabel">Agreement Services Only (ASO) Benefits</h5>
+                        <small class="text-muted">Self-funded healthcare management support.</small>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="mb-0">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Healthline Agreement Services Only (ASO) offers self-funded healthcare with professional management.</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Coverage for relevant medical needs.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
         <div class="container d-flex justify-content-between align-items-center small">
