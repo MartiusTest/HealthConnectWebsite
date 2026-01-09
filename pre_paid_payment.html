@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===== Global SEO Defaults ===== -->
+    <title>Pre-Paid Plan Payment</title>
+    <meta name="description" content="Submit your pre-paid plan payment receipt to Health Connect." />
+    <meta name="keywords" content="health connect, pre-paid payment, insurance payment, receipt upload" />
+    <meta name="author" content="Health Connect Philippines" />
+
+    <!-- ===== Bootstrap & Icons ===== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Health Connect CSS (lowercase path) -->
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="/index.html">
+                <img src="/images/logo.png" alt="Health Connect Logo" height="50" class="me-2" />
+                Health Connect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHC">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navHC" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main class="container py-4">
+        <h2 class="text-primary mb-3">Pre-Paid Plan Payment</h2>
+        <p class="text-muted mb-4">
+            Upload your payment receipt so we can confirm your pre-paid plan enrollment.
+            Please provide complete and accurate details to help us match your payment quickly.
+        </p>
+
+        <div class="row g-4">
+            <!-- FORM COLUMN -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <form id="paymentForm" class="needs-validation" novalidate method="post" action="pre_paid_payment.php" enctype="multipart/form-data">
+                            <!-- Personal Info -->
+                            <h5 class="mt-2 mb-3">Your Information</h5>
+
+                            <div class="mb-3">
+                                <label for="full_name" class="form-label">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="full_name" name="full_name"
+                                       class="form-control"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Please enter your full name.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" id="email" name="email"
+                                       class="form-control"
+                                       required />
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Mobile Number
+                                </label>
+                                <input type="text" id="phone" name="phone"
+                                       class="form-control"
+                                       placeholder="+63 9XX XXX XXXX" />
+                                <div class="invalid-feedback">
+                                    Please enter a valid mobile number.
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <!-- Insurance Details -->
+                            <h5 class="mb-3">Insurance Details</h5>
+
+                            <div class="mb-3">
+                                <label for="provider" class="form-label">
+                                    Insurance Provider <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="provider" name="provider"
+                                       class="form-control"
+                                       list="provider_list"
+                                       required />
+                                <datalist id="provider_list">
+                                    <option value="Pacific Cross"></option>
+                                    <option value="OONA"></option>
+                                    <option value="PhilCare"></option>
+                                    <option value="Medicard"></option>
+                                    <option value="Alpha Insurance"></option>
+                                    <option value="Kaiser"></option>
+                                    <option value="Other / Not Sure"></option>
+                                </datalist>
+                                <div class="invalid-feedback">
+                                    Please enter the insurance provider.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="plan" class="form-label">
+                                    Plan Name
+                                </label>
+                                <input type="text" id="plan" name="plan"
+                                       class="form-control"
+                                       placeholder="e.g., UNLI-CONSULT for Adults" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="insured_person" class="form-label">
+                                    Person to be Insured
+                                </label>
+                                <input type="text" id="insured_person" name="insured_person"
+                                       class="form-control"
+                                       placeholder="e.g., Self, Spouse, Child" />
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="birthdate" class="form-label">
+                                        Birthdate
+                                    </label>
+                                    <input type="date" id="birthdate" name="birthdate" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="age" class="form-label">
+                                        Age
+                                    </label>
+                                    <input type="number" id="age" name="age" class="form-control" min="0" readonly />
+                                </div>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="receipt_attachment" class="form-label">
+                                    Payment Receipt Attachment <span class="text-danger">*</span>
+                                </label>
+                                <input class="form-control" type="file" id="receipt_attachment" name="receipt_attachment" required />
+                                <div class="invalid-feedback">
+                                    Please attach a copy of your payment receipt.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="personal_id_attachment" class="form-label">
+                                    Personal ID Attachment <span class="text-danger">*</span>
+                                </label>
+                                <input class="form-control" type="file" id="personal_id_attachment" name="personal_id_attachment" required />
+                                <div class="invalid-feedback">
+                                    Please attach a copy of your personal ID.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    Remarks:
+                                </label>
+                                <textarea id="message" name="message"
+                                          class="form-control"
+                                          rows="4"
+                                          placeholder="Include any additional details about your payment or plan"></textarea>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="submit" class="btn btn-primary">
+                                    Submit Receipt
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary">
+                                    Clear Form
+                                </button>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                By submitting this form, you agree that Health Connect may review your receipt
+                                and contact you regarding your pre-paid plan enrollment.
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIDE INFO COLUMN -->
+            <div class="col-lg-4">
+                <div class="card border-0 bg-light h-100">
+                    <div class="card-body">
+                        <h5 class="mb-3">What happens next?</h5>
+                        <ul class="small text-muted mb-3">
+                            <li>Your receipt will be sent securely to Health Connect.</li>
+                            <li>We will validate your payment and match it to your plan.</li>
+                            <li>A representative may contact you for additional details.</li>
+                            <li>You’ll receive confirmation once your payment is verified.</li>
+                        </ul>
+
+                        <h6 class="mb-2">Tips for faster processing</h6>
+                        <ul class="small text-muted">
+                            <li>Upload a clear photo or scanned copy of the receipt.</li>
+                            <li>Include the plan name and provider if available.</li>
+                            <li>Double-check your email address and mobile number.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer text-white py-3 mt-auto" style="background-color: var(--hc-blue);">
+        <div class="container d-flex justify-content-between align-items-center small">
+            <span>&copy; 2025 Health Connect</span>
+            <span>Insurance • Home Health Care • Diagnostics</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + simple validation -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById('paymentForm');
+            if (!form) return;
+            var birthdateInput = document.getElementById('birthdate');
+            var ageInput = document.getElementById('age');
+            var planInput = document.getElementById('plan');
+            var providerInput = document.getElementById('provider');
+            var urlParams = new URLSearchParams(window.location.search);
+            var providerParam = urlParams.get('provider');
+            var planParam = urlParams.get('plan');
+
+            function updateAge() {
+                if (!birthdateInput || !ageInput || !birthdateInput.value) {
+                    if (ageInput) {
+                        ageInput.value = '';
+                    }
+                    return;
+                }
+
+                var birthDate = new Date(birthdateInput.value);
+                if (Number.isNaN(birthDate.getTime())) {
+                    ageInput.value = '';
+                    return;
+                }
+
+                var today = new Date();
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var monthDiff = today.getMonth() - birthDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                ageInput.value = age >= 0 ? age : '';
+            }
+
+            function syncProviderSelection() {
+                if (!providerInput || !providerParam) return;
+                providerInput.value = providerParam.replace(/_/g, ' ');
+            }
+
+            function syncPlanSelection() {
+                if (!planInput || !planParam) return;
+                planInput.value = planParam.replace(/_/g, ' ');
+            }
+
+            if (birthdateInput) {
+                birthdateInput.addEventListener('change', updateAge);
+                birthdateInput.addEventListener('input', updateAge);
+            }
+
+            syncProviderSelection();
+            syncPlanSelection();
+
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        })();
+    </script>
+</body>
+</html>
