@@ -346,7 +346,7 @@
 
             function syncPlanSelection() {
                 if (!planInput || !planParam) return;
-                planInput.value = planParam;
+                planInput.value = planParam.replace(/_/g, ' ');
             }
 
             if (birthdateInput) {
