@@ -141,6 +141,18 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="plan" class="form-label">
+                                    Plan Name (optional)
+                                </label>
+                                <input type="text" id="plan" name="plan"
+                                       class="form-control"
+                                       placeholder="e.g., Blue Royal, Select ER, International Travel" />
+                                <div class="form-text">
+                                    If you are not sure, you may leave this blank.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="insured_person" class="form-label">
                                     Person to be Insured
                                 </label>
@@ -202,18 +214,6 @@
                                     <label class="form-check-label" for="personal_accident">
                                         Personal Accident
                                     </label>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="plan" class="form-label">
-                                    Plan Name (optional)
-                                </label>
-                                <input type="text" id="plan" name="plan"
-                                       class="form-control"
-                                       placeholder="e.g., Blue Royal, Select ER, International Travel" />
-                                <div class="form-text">
-                                    If you are not sure, you may leave this blank.
                                 </div>
                             </div>
 
@@ -288,7 +288,17 @@
             if (!form) return;
             var birthdateInput = document.getElementById('birthdate');
             var ageInput = document.getElementById('age');
+            var planInput = document.getElementById('plan');
             var providerCheckboxes = form.querySelectorAll('input[name="provider[]"]');
+            var urlParams = new URLSearchParams(window.location.search);
+            var providerParam = urlParams.get('provider');
+            var planParam = urlParams.get('plan');
+
+            function normalizeProvider(value) {
+                return value
+                    ? value.toLowerCase().replace(/[^a-z0-9]/g, '')
+                    : '';
+            }
 
             function updateAge() {
                 if (!birthdateInput || !ageInput || !birthdateInput.value) {
@@ -323,6 +333,22 @@
                 });
             }
 
+            function syncProviderSelection() {
+                if (!providerParam || !providerCheckboxes.length) return;
+                var normalizedParam = normalizeProvider(providerParam);
+                providerCheckboxes.forEach(function (checkbox) {
+                    var normalizedValue = normalizeProvider(checkbox.value);
+                    if (normalizedParam && normalizedValue === normalizedParam) {
+                        checkbox.checked = true;
+                    }
+                });
+            }
+
+            function syncPlanSelection() {
+                if (!planInput || !planParam) return;
+                planInput.value = planParam;
+            }
+
             if (birthdateInput) {
                 birthdateInput.addEventListener('change', updateAge);
                 birthdateInput.addEventListener('input', updateAge);
@@ -331,8 +357,10 @@
                 providerCheckboxes.forEach(function (checkbox) {
                     checkbox.addEventListener('change', syncProviderValidation);
                 });
+                syncProviderSelection();
                 syncProviderValidation();
             }
+            syncPlanSelection();
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
                     event.preventDefault();
