@@ -20,7 +20,8 @@ function log_pre_paid_error(
     $birthdate,
     $age,
     $message,
-    $receiptName
+    $receiptName,
+    $personalIdName
 ) {
     try {
         $logDir = __DIR__ . '/app_data/logs';
@@ -45,6 +46,7 @@ function log_pre_paid_error(
         $sb .= "Birthdate : " . $birthdate . "\n";
         $sb .= "Age       : " . $age . "\n";
         $sb .= "Receipt   : " . $receiptName . "\n";
+        $sb .= "Personal ID: " . $personalIdName . "\n";
         $sb .= "Message   : " . (trim($message) === '' ? '(none)' : $message) . "\n\n";
 
         if ($ex instanceof \Throwable || $ex instanceof \Exception) {
@@ -71,6 +73,9 @@ $message  = isset($_POST['message']) ? trim($_POST['message']) : '';
 $receiptName = '';
 $receiptTmp = '';
 $receiptError = null;
+$personalIdName = '';
+$personalIdTmp = '';
+$personalIdError = null;
 
 if (isset($_FILES['receipt_attachment']) && is_array($_FILES['receipt_attachment'])) {
     $receiptName = isset($_FILES['receipt_attachment']['name']) ? $_FILES['receipt_attachment']['name'] : '';
@@ -80,7 +85,15 @@ if (isset($_FILES['receipt_attachment']) && is_array($_FILES['receipt_attachment
     $receiptError = UPLOAD_ERR_NO_FILE;
 }
 
-if ($fullName === '' || $email === '' || $provider === '' || $receiptError !== UPLOAD_ERR_OK) {
+if (isset($_FILES['personal_id_attachment']) && is_array($_FILES['personal_id_attachment'])) {
+    $personalIdName = isset($_FILES['personal_id_attachment']['name']) ? $_FILES['personal_id_attachment']['name'] : '';
+    $personalIdTmp = isset($_FILES['personal_id_attachment']['tmp_name']) ? $_FILES['personal_id_attachment']['tmp_name'] : '';
+    $personalIdError = isset($_FILES['personal_id_attachment']['error']) ? $_FILES['personal_id_attachment']['error'] : UPLOAD_ERR_NO_FILE;
+} else {
+    $personalIdError = UPLOAD_ERR_NO_FILE;
+}
+
+if ($fullName === '' || $email === '' || $provider === '' || $receiptError !== UPLOAD_ERR_OK || $personalIdError !== UPLOAD_ERR_OK) {
     header('Location: thankyou_pre_paid_failed.html');
     exit;
 }
@@ -99,7 +112,8 @@ try {
     $body .= "Birthdate: " . ($birthdate === '' ? '(not specified)' : $birthdate) . "\n";
     $body .= "Age: " . ($age === '' ? '(not specified)' : $age) . "\n\n";
 
-    $body .= "Receipt File: " . ($receiptName === '' ? '(not provided)' : $receiptName) . "\n\n";
+    $body .= "Receipt File: " . ($receiptName === '' ? '(not provided)' : $receiptName) . "\n";
+    $body .= "Personal ID File: " . ($personalIdName === '' ? '(not provided)' : $personalIdName) . "\n\n";
 
     $body .= "Remarks:\n";
     $body .= ($message === '' ? "(none provided)" : $message) . "\n\n";
@@ -125,6 +139,11 @@ try {
     if ($receiptError === UPLOAD_ERR_OK && $receiptTmp !== '') {
         $safeReceiptName = $receiptName !== '' ? $receiptName : 'payment-receipt';
         $mail->addAttachment($receiptTmp, $safeReceiptName);
+    }
+
+    if ($personalIdError === UPLOAD_ERR_OK && $personalIdTmp !== '') {
+        $safePersonalIdName = $personalIdName !== '' ? $personalIdName : 'personal-id';
+        $mail->addAttachment($personalIdTmp, $safePersonalIdName);
     }
 
     $mail->Subject = 'Health Connect – Pre-Paid Payment Receipt';
@@ -209,7 +228,8 @@ try {
                 $birthdate,
                 $age,
                 $message,
-                $receiptName
+                $receiptName,
+                $personalIdName
             );
         }
     }
@@ -229,7 +249,8 @@ try {
         $birthdate,
         $age,
         $message,
-        $receiptName
+        $receiptName,
+        $personalIdName
     );
     header('Location: thankyou_pre_paid_failed.html');
     exit;
