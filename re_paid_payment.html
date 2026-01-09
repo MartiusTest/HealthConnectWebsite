@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting – Health Connect</title>
+    <meta http-equiv="refresh" content="0; url=/pre_paid_payment.html" />
+    <link href="/content/Site.css" rel="stylesheet" />
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+    <div class="text-center">
+        <p class="text-muted">Redirecting to the payment receipt page...</p>
+        <p><a href="/pre_paid_payment.html">Click here if you are not redirected.</a></p>
+    </div>
+    <script>
+        (function () {
+            var target = '/pre_paid_payment.html' + window.location.search;
+            window.location.replace(target);
+        })();
+    </script>
+</body>
+</html>
