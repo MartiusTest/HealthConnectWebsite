@@ -11,6 +11,11 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+img,
+iframe {
+    max-width: 100%;
+}
+
 /* Navbar */
 .navbar-brand {
     color: var(--hc-blue) !important;
@@ -205,4 +210,42 @@ a {
 
 .hidden-field {
     display: none !important;
+}
+
+/* Mobile enhancements */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .p-5 {
+        padding: 2rem !important;
+    }
+
+    .provider-logo {
+        width: 140px;
+        height: 70px;
+    }
+
+    .provider-card {
+        min-height: auto;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
 }
