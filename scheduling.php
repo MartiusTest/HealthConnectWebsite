@@ -105,15 +105,15 @@ try {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host       = 'mail.primorismanpower.com';
+    $mail->Host       = 'mail.healthconnect.com.ph';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'testonly@primorismanpower.com';
-    $mail->Password   = 'primoris@2025';
+    $mail->Username   = 'support@healthconnect.com.ph';
+    $mail->Password   = 'h3@l+hc0nn3ct@2026';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    $mail->setFrom('kent.jensen@gmail.com', 'Health Connect – Scheduling');
-    $mail->addAddress('testonly@primorismanpower.com');
+    $mail->setFrom('support@healthconnect.com.ph', 'Health Connect – Scheduling');
+    $mail->addAddress('support@healthconnect.com.ph');
 
     if ($email !== '') {
         $mail->addReplyTo($email, $fullName);
@@ -130,14 +130,14 @@ try {
         try {
             $cm = new PHPMailer(true);
             $cm->isSMTP();
-            $cm->Host       = 'mail.primorismanpower.com';
+            $cm->Host       = 'mail.healthconnect.com.ph';
             $cm->SMTPAuth   = true;
-            $cm->Username   = 'testonly@primorismanpower.com';
-            $cm->Password   = 'primoris@2025';
+            $cm->Username   = 'support@healthconnect.com.ph';
+            $cm->Password   = 'h3@l+hc0nn3ct@2026';
             $cm->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $cm->Port       = 587;
 
-            $cm->setFrom('kent.jensen@gmail.com', 'Health Connect');
+            $cm->setFrom('support@healthconnect.com.ph', 'Health Connect');
             $cm->addAddress($email, $fullName);
 
             $safeName   = htmlspecialchars($fullName, ENT_QUOTES, 'UTF-8');

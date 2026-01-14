@@ -34,15 +34,15 @@ try {
     // 1) Send to Health Connect
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host       = 'mail.primorismanpower.com';
+    $mail->Host       = 'mail.healthconnect.com.ph';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'testonly@primorismanpower.com';
-    $mail->Password   = 'primoris@2025';
+    $mail->Username   = 'support@healthconnect.com.ph';
+    $mail->Password   = 'h3@l+hc0nn3ct@2026';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
-    $mail->setFrom('kent.jensen@gmail.com', 'Health Connect – Contact Form');
-    $mail->addAddress('testonly@primorismanpower.com');
+    $mail->setFrom('support@healthconnect.com.ph', 'Health Connect – Contact Form');
+    $mail->addAddress('support@healthconnect.com.ph');
     $mail->addReplyTo($email, $name);
 
     $mail->Subject = 'Health Connect – Contact Inquiry';
@@ -55,14 +55,14 @@ try {
     try {
         $auto = new PHPMailer(true);
         $auto->isSMTP();
-        $auto->Host       = 'mail.primorismanpower.com';
+        $auto->Host       = 'mail.healthconnect.com.ph';
         $auto->SMTPAuth   = true;
-        $auto->Username   = 'testonly@primorismanpower.com';
-        $auto->Password   = 'primoris@2025';
+        $auto->Username   = 'support@healthconnect.com.ph';
+        $auto->Password   = 'h3@l+hc0nn3ct@2026';
         $auto->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $auto->Port       = 587;
 
-        $auto->setFrom('support@healthconnect.ph', 'Health Connect Support');
+        $auto->setFrom('support@healthconnect.com.ph', 'Health Connect Support');
         $auto->addAddress($email, $name);
         $auto->Subject = 'We have received your message – Health Connect';
 
