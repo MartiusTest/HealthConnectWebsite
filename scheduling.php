@@ -119,7 +119,7 @@ try {
         $mail->addReplyTo($email, $fullName);
     }
 
-    $mail->Subject = 'Health Connect – Scheduling Request';
+    $mail->Subject = 'Health Connect - Scheduling Request';
     $mail->Body    = $body;
     $mail->isHTML(false);
 
