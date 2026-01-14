@@ -98,7 +98,7 @@ try {
         $mail->addReplyTo($email, $name);
     }
 
-    $mail->Subject = 'Health Connect – Career Application';
+    $mail->Subject = 'Health Connect - Career Application';
     $mail->Body    = $body;
     $mail->isHTML(false);
     $mail->send();

@@ -146,7 +146,7 @@ try {
         $mail->addAttachment($personalIdTmp, $safePersonalIdName);
     }
 
-    $mail->Subject = 'Health Connect – Pre-Paid Payment Receipt';
+    $mail->Subject = 'Health Connect - Pre-Paid Payment Receipt';
     $mail->Body    = $body;
     $mail->isHTML(false);
 

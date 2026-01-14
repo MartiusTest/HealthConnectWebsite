@@ -155,7 +155,7 @@ try {
         $mail->addReplyTo($email, $fullName);
     }
 
-    $mail->Subject = 'Health Connect – Travel Insurance Quote Request';
+    $mail->Subject = 'Health Connect - Travel Insurance Quote Request';
     $mail->Body    = $body;
     $mail->isHTML(false);
 
