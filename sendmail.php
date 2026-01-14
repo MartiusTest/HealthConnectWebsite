@@ -64,7 +64,7 @@ try {
 
         $auto->setFrom('support@healthconnect.com.ph', 'Health Connect Support');
         $auto->addAddress($email, $name);
-        $auto->Subject = 'We have received your message – Health Connect';
+    $auto->Subject = 'We have received your message - Health Connect';
 
         $autoBody  = "Hi {$name},\n\n";
         $autoBody .= "Thank you for contacting Health Connect!\n";
