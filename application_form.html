@@ -92,6 +92,8 @@
   const planSubtitle = document.getElementById("planSubtitle");
   if (plan) {
     planSubtitle.textContent = `${provider} – ${plan}`;
+  } else if (provider) {
+    planSubtitle.textContent = `${provider} Application Forms`;
   }
 
   const planFolderOverrides = {
@@ -115,7 +117,9 @@
   const planFolder = planFolderOverrides[provider]?.[plan] || (plan ? slugify(plan) : "");
   const folderPath = planFolder
     ? `pdf/application_forms/${providerSlug}/${planFolder}`
-    : "";
+    : providerSlug
+      ? `pdf/application_forms/${providerSlug}`
+      : "";
 
   const formsContent = document.getElementById("formsContent");
 
