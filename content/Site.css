@@ -152,6 +152,11 @@ a {
     display: block;
 }
 
+.provider-logo--oona {
+    width: 207px;
+    height: 104px;
+}
+
 /* Clickable wrapper (so whole card is clickable) */
 .provider-card-link {
     text-decoration: none;
@@ -237,6 +242,11 @@ a {
     .provider-logo {
         width: 140px;
         height: 70px;
+    }
+
+    .provider-logo--oona {
+        width: 161px;
+        height: 81px;
     }
 
     .provider-card {
