@@ -26,7 +26,7 @@ C) FOLDER NAMES MUST ALWAYS BE LOWERCASE (PATH NORMALIZATION)
    /Images/...  -> /images/...
    /Content/... -> /content/...
    (and any other folder segment in a URL path should be lowercased if it refers to a folder)
-2) Do NOT change the filename casing unless explicitly requested. (e.g., logo.png stays logo.png)
+2) Do NOT change the filename casing unless explicitly requested. (e.g., logo_blue.png stays logo_blue.png)
 3) CSS file /content/Site.css
 
 D) NAVBAR HOME LINK
