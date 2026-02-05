@@ -1,7 +1,6 @@
 ﻿/* Core palette */
 :root {
-    --hc-blue: #007bff; /* primary blue */
-    --hc-dark-blue: #2E5495; /* logo text dark blue */
+    --hc-blue: #2E5495; /* primary blue */
     --hc-orange: #ff7a00; /* accent orange */
     --hc-light: #f8fafc;
 }
@@ -19,7 +18,7 @@ iframe {
 
 /* Navbar */
 .navbar-brand {
-    color: var(--hc-dark-blue) !important;
+    color: var(--hc-blue) !important;
 }
 
 .navbar-nav .nav-link {
