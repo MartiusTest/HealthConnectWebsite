@@ -82,6 +82,11 @@ a {
     color: var(--hc-blue);
 }
 
+.hc-highlight-card-img {
+    height: 220px;
+    object-fit: cover;
+}
+
 .text-center img {
     filter: drop-shadow(0 2px 2px rgba(0,0,0,.2));
 }
