@@ -53,6 +53,20 @@ a {
         text-decoration: underline;
     }
 
+/* Primary text utility */
+.text-primary {
+    color: var(--hc-blue) !important;
+}
+
+/* Link buttons */
+.btn-link {
+    color: var(--hc-blue);
+}
+
+.btn-link:hover {
+    color: var(--hc-orange);
+}
+
 /* Footer */
 .footer {
     background-color: var(--hc-blue);
