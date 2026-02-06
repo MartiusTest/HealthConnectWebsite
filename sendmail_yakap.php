@@ -45,7 +45,12 @@ $philhealthNo = isset($_POST['philhealth_no']) ? trim($_POST['philhealth_no']) :
 $hasPhilsysId = isset($_POST['has_philsys_id']) ? trim($_POST['has_philsys_id']) : '';
 $notes       = isset($_POST['notes']) ? trim($_POST['notes']) : '';
 
-if ($fullName === '' || $email === '' || $philhealthNo === '' || ($hasPhilsysId !== 'Yes' && $hasPhilsysId !== 'No')) {
+if ($fullName === '' || $philhealthNo === '' || ($hasPhilsysId !== 'Yes' && $hasPhilsysId !== 'No')) {
+    header('Location: thankyou_yakap_failed.html');
+    exit;
+}
+
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     header('Location: thankyou_yakap_failed.html');
     exit;
 }
