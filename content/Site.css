@@ -314,3 +314,10 @@ a {
 
 
 
+
+.hc-hero-logo-bg {
+    background-image: url('/images/logo_blue.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
