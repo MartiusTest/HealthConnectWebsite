@@ -32,6 +32,18 @@ iframe {
         color: var(--hc-orange) !important;
     }
 
+.hc-accent-divider {
+    height: 1px;
+    background-color: var(--hc-orange);
+    opacity: 0.6;
+}
+
+.hc-accent-divider--blue {
+    height: 3px;
+    background-color: var(--hc-blue);
+    opacity: 0.7;
+}
+
 /* Primary button (Schedule, etc.) */
 .btn-primary {
     background-color: var(--hc-blue);
