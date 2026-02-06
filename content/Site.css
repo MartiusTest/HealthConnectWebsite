@@ -318,7 +318,7 @@ a {
 .hc-hero-logo-bg {
     background-image: url('/images/logo transparentx.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left center;
     background-size: contain;
 }
 
