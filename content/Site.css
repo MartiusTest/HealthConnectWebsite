@@ -51,10 +51,19 @@ iframe {
     opacity: 0.4;
 }
 
+.hc-accent-divider:not(.hc-accent-divider--blue) {
+    width: min(1320px, calc(100% - 3rem));
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .hc-accent-divider--blue {
     height: 2px;
     background-color: var(--hc-blue);
     opacity: 0.4;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Primary button (Schedule, etc.) */
