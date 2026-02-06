@@ -50,11 +50,6 @@ iframe {
     opacity: 0.6;
 }
 
-.hc-accent-divider--blue {
-    background-color: var(--hc-blue);
-    opacity: 0.7;
-}
-
 /* Primary button (Schedule, etc.) */
 .btn-primary {
     background-color: var(--hc-blue);
@@ -304,4 +299,5 @@ a {
         text-align: center;
     }
 }
+
 
