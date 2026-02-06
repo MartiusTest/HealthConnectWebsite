@@ -46,7 +46,7 @@ iframe {
     }
 
 .hc-accent-divider {
-    height: 1px;
+    height: 4px;
     background-color: var(--hc-orange);
     opacity: 0.4;
     width: min(1320px, calc(100% - 1.5rem));
@@ -324,4 +324,5 @@ a {
     background-position: left center;
     background-size: contain;
 }
+
 
