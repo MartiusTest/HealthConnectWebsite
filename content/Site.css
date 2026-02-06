@@ -44,6 +44,11 @@ iframe {
     opacity: 0.7;
 }
 
+.hc-accent-divider--blue {
+    background-color: var(--hc-blue);
+    opacity: 0.7;
+}
+
 .hc-accent-divider {
     height: 1px;
     background-color: var(--hc-orange);
@@ -299,5 +304,6 @@ a {
         text-align: center;
     }
 }
+
 
 
