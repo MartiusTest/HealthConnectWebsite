@@ -83,8 +83,10 @@ a {
 }
 
 .hc-highlight-card-img {
-    height: 220px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #fff;
 }
 
 .text-center img {
