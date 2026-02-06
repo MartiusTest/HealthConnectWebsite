@@ -27,6 +27,11 @@ iframe {
     font-weight: 500;
 }
 
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
         color: var(--hc-orange) !important;
@@ -293,4 +298,6 @@ a {
         text-align: center;
     }
 }
+
+
 
