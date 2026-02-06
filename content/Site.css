@@ -40,13 +40,13 @@ iframe {
 .hc-accent-divider {
     height: 2px;
     background-color: var(--hc-orange);
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .hc-accent-divider--blue {
     height: 2px;
     background-color: var(--hc-blue);
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 /* Primary button (Schedule, etc.) */
@@ -298,6 +298,7 @@ a {
         text-align: center;
     }
 }
+
 
 
 
