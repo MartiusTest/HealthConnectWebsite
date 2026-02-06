@@ -19,6 +19,7 @@ iframe {
 /* Navbar */
 .navbar-brand {
     color: var(--hc-blue) !important;
+    font-size: 2rem;
 }
 
 .navbar-nav .nav-link {
