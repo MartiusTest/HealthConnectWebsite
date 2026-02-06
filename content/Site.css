@@ -38,7 +38,7 @@ iframe {
     }
 
 .hc-accent-divider {
-    height: 2px;
+    height: 1px;
     background-color: var(--hc-orange);
     opacity: 0.6;
 }
@@ -298,6 +298,7 @@ a {
         text-align: center;
     }
 }
+
 
 
 
