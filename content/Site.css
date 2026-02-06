@@ -55,7 +55,7 @@ iframe {
 }
 
 .hc-accent-divider--blue {
-    height: 2px;
+    height: 4px;
     background-color: var(--hc-blue);
     opacity: 0.4;
 }
@@ -324,5 +324,6 @@ a {
     background-position: left center;
     background-size: contain;
 }
+
 
 
